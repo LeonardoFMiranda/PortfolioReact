@@ -1,0 +1,42 @@
+.smallBoxButton {
+  background-color: #0c91ae;
+  border-radius: 0.4rem;
+
+  width: 8.3rem;
+  height: 8.3rem;
+  padding: 0.9rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  transition: 0.4s ease 0s;
+}
+
+.smallBoxButton:active {
+  transform: scale(1.1);
+}
+
+.smallBoxButton h2 {
+  color: black;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 652px) {
+  .smallBoxButton {
+    width: calc(27.4rem);
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .smallBoxButton {
+    width: calc(45.4rem);
+    justify-content: center;
+  }
+  .smallBoxButton:hover {
+    background-color: #11B1D3;
+    cursor: pointer;
+  }
+}

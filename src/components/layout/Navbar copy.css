@@ -1,0 +1,224 @@
+.menu-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/*Container do header */
+.container__navbar {
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+/*Container da nav */
+.container__navbarItens {
+  margin: auto;
+  padding: 1rem 2.4rem;
+}
+
+/*div dos Itens da navbar*/
+.container__itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*Css para alterar a Font do LM*/
+.container__itens span a {
+  font-size: 3.5rem;
+  color: #11b1d3;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5rem;
+}
+
+/*Css para alterar a Font dos itens da lista*/
+.container__itens a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.16em;
+}
+
+/*ul dos Itens da navbar*/
+.navbar__listContainer {
+  display: none;
+}
+.open-icon {
+    display: block;
+    font-size: 2.8rem;
+    color: rgb(12, 145, 174);
+    transition: all 0.4s ease 0s;
+  }
+/*Css para alterar o li*/
+.navbar__listContainer .menu__item {
+  padding: 0.8rem 1rem;
+  margin-right: 10px;
+  border: 0;
+  border-radius: 0.4rem;
+  transition: all 0.4s ease 0s;
+}
+
+.navbar__listContainer .menu__item:hover {
+  background-color: #11b1d3;
+  border: 1px solid #11b1d3;
+}
+
+/*Container do dropdown*/
+.container__dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  letter-spacing: 0.16em;
+  color: #fff;
+  font-weight: bold;
+
+  position: relative;
+}
+
+.container__submenu {
+  display: none;
+  position: absolute;
+  top: 5.1rem;
+  list-style-type: none;
+}
+
+.menu__item:hover .container__submenu {
+  display: block;
+}
+
+.container__submenu .submenu-item a {
+  display: block;
+  padding: 0.8rem 1.3rem;
+
+  color: rgb(217, 217, 217);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  background-color: #0b0909;
+
+  transition: all 0.4s ease 0s;
+}
+
+.container__submenu .submenu-item a:hover {
+  background-color: #0c91ae;
+}
+
+@media screen and (min-width: 1024px) {
+  /*Container do header */
+  .container__navbar {
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+  }
+
+  /*Container da nav */
+  .container__navbarItens {
+    width: 65rem;
+    margin: auto;
+    padding: 1rem 2.4rem;
+  }
+
+  
+
+  /*div dos Itens da navbar*/
+  .container__itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /*Css para alterar a Font do LM*/
+  .container__itens span a {
+    font-size: 3.5rem;
+    color: #11b1d3;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5rem;
+  }
+
+  /*Css para alterar a Font dos itens da lista*/
+  .container__itens a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+  }
+
+  /*ul dos Itens da navbar*/
+  .navbar__listContainer {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+  }
+
+  /*Css para alterar o li*/
+  .navbar__listContainer .menu__item {
+    padding: 0.8rem 1rem;
+    margin-right: 10px;
+    border: 0;
+    border-radius: 0.4rem;
+    transition: all 0.4s ease 0s;
+  }
+
+  .navbar__listContainer .menu__item:hover {
+    background-color: #11b1d3;
+    border: 1px solid #11b1d3;
+  }
+
+  /*Container do dropdown*/
+  .container__dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    letter-spacing: 0.16em;
+    color: #fff;
+    font-weight: bold;
+
+    position: relative;
+  }
+
+  .container__submenu {
+    display: none;
+    position: absolute;
+    top: 5.1rem;
+    list-style-type: none;
+  }
+
+  .menu__item:hover .container__submenu {
+    display: block;
+  }
+
+  .container__submenu .submenu-item a {
+    display: block;
+    padding: 0.8rem 1.3rem;
+
+    color: rgb(217, 217, 217);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    background-color: #0b0909;
+
+    transition: all 0.4s ease 0s;
+  }
+
+  .container__submenu .submenu-item a:hover {
+    background-color: #0c91ae;
+  }
+}

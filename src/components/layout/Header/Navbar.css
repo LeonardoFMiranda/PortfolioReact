@@ -1,0 +1,243 @@
+/*Container do header */
+.container__header {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease, position 0.3s ease;
+  top: 0;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.fixed {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out;
+}
+
+/*Container da nav */
+.container__navbarItens {
+  margin: auto;
+  padding: 1rem 2.4rem;
+}
+
+/*div dos Itens da navbar*/
+.container__itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*Css para alterar a Font do LM*/
+.container__itens span a {
+  font-size: 3rem;
+  color: #11b1d3;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.4rem;
+  text-decoration: none;
+  transition: all 0.4s ease 0s;
+}
+
+.open-icon {
+  display: block;
+  font-size: 2.8rem;
+  color: rgb(12, 145, 174);
+  transition: all 0.4s ease 0s;
+}
+
+.navbar__btnIcon {
+  background-color: transparent;
+  border: none;
+}
+
+.container__menu {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.menu__box {
+  width: 100%;
+  height: 100vh;
+  padding: 0.8rem 1.2rem;
+  background-color: rgb(11, 9, 9);
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  right: 1.2rem;
+  font-size: 2.8rem;
+  color: rgb(12, 145, 174);
+}
+.menu__column {
+  display: flex;
+  flex-direction: column;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  margin-top: 70px;
+}
+.menu__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu__item:hover {
+  border: 1px solid #11b1d3;
+}
+
+.menu__item a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.item__dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  letter-spacing: 0.16em;
+  color: #fff;
+
+  position: relative;
+}
+
+.submenu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style-type: none;
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.submenu__item {
+  color: #fff;
+}
+
+.menu__item:hover .submenu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu__item:hover .submenu__list .submenu__item {
+  padding: 6px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 8px;
+}
+
+.container__navbarList {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__box {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container__navbarItens {
+    width: 65rem;
+    margin: auto;
+    padding: 1rem 2.4rem;
+  }
+  .navbar__btnIcon {
+    display: none;
+  }
+
+  .container__navbarList {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .navbar__item {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.4s all ease 0s;
+    border: 1px solid transparent;
+  }
+
+  /* .container__navbarList .navbar__item,
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    padding: 0.5rem;
+  } */
+
+  .container__navbarList .navbar__item:hover {
+    background-color: #11b1d3;
+    border: 1px solid #11b1d3;
+  }
+  .navbar__submenu {
+    display: none;
+    position: relative;
+  }
+
+  .navbar__item:hover .navbar__submenu {
+    display: block;
+
+    position: absolute;
+    top: 68px;
+    list-style-type: none;
+    background-color: rgb(11, 9, 9);
+  }
+
+  .submenu__item {
+    transition: 0.4s all ease 0s;
+    width: 100%;
+    text-align: start;
+  }
+
+  .submenu__item:hover {
+    background-color: #0c91ae;
+  }
+
+  .navbar__submenu .submenu__item a {
+    display: block;
+    font-weight: 300;
+    padding: 8px 20px;
+    width: 100%;
+  }
+
+  .submenu__item:hover a {
+    color: #0b0909;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

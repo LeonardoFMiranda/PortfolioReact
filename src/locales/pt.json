@@ -1,0 +1,15 @@
+{
+    "translation":{
+        "header":{
+            "About":"Sobre mim",
+            "Contact":"Contato",
+            "Language": "IDIOMA"
+        },
+        "banner": {
+            "row1": "Olá! eu sou",
+            "row2": "Leonardo Miranda",
+            "row3": "Desenvolvedor Fullstack",
+            "title": "Transformando ideias em código."
+        }
+    }
+}

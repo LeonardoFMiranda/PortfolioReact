@@ -1,0 +1,31 @@
+.smallBox {
+  background-color: #1d1d1f;
+  border-radius: .4rem;
+  
+
+  width: 8.3rem;
+  height: 8.3rem;
+  padding: 0.9rem;
+  
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: center;
+}
+
+.smallBox h2 {
+  background: linear-gradient(rgb(6, 61, 140) 0%, rgb(100, 186, 234) 100%) text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+}
+
+.smallBox h3 {
+  color: #768699;
+  font-weight: 300;
+  
+}
+
+
+

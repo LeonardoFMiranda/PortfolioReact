@@ -1,0 +1,15 @@
+{
+    "translation": {
+        "header": {
+            "About": "About",
+            "Contact": "Contact",
+            "Language": "LANGUAGE"
+        },
+        "banner": {
+            "row1": "Hey! I'm",
+            "row2": "Leonardo Miranda",
+            "row3": "FullStack Developer",
+            "title": "Turning ideas into code."
+        }
+    }
+}

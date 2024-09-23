@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  border: 10px solid transparent;
+    animation: borderAnimation 8s linear infinite;
 }
 
 .App-logo {
@@ -35,4 +37,175 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* Default Light mode colors */
+:root{
+  
+  --clr-primary: rgb(236, 236, 236);
+  --bx-clr-dark: rgb(200, 200, 200);
+  --bx-clr-light: rgb(244, 244, 244);
+ 
+}
+
+/* Dark mode colors */ 
+.darkmode{
+  --clr-primary: rgb(50, 50, 50);
+  --bx-clr-dark: rgb(35, 35, 35);
+  --bx-clr-light: rgb(55, 55, 55);
+
+}
+
+/* Center the button */
+.center{
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: scale(1.5);
+}
+
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Default Switch Styling */
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  border-radius: 16px;
+  box-shadow: 3px 3px 5px var(--bx-clr-dark), -3px -3px 5px var(--bx-clr-light);
+  
+}
+
+/* Default Slider Styling */
+.slider {
+  box-shadow: 3px 3px 5px var(--bx-clr-dark), -3px -3px 5px var(--bx-clr-light);
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 16px;
+  transition: transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease-in-out;
+
+}
+
+.switch:hover{
+  cursor: pointer;
+  
+}
+
+/* Move the center of switch */
+input:checked + .slider{
+  transform: translatex(20px);
+  
+}
+
+/* ========================= Sun ========================*/
+
+.sun{
+  background-color: rgb(213, 204, 39);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 350ms ease-in-out;
+}
+
+/* Sun movement on toggle*/
+input:checked + .slider > .sun{
+  transform: rotatez(180deg);
+  pointer-events: none;
+}
+
+/*Sun glow when toggled to light(or sun) mode*/
+.sun-glow{
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 20%;
+  transition: opacity 350ms ease-in-out;
+}
+
+/* When toggled to dark */
+input:checked + .slider > .sun > .sun-glow{
+  opacity: 0;
+}
+
+
+/* ========================= Moon ========================*/
+
+.moon{
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+  background-color: rgb(210, 210, 220);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 350ms ease-in-out;
+}
+
+/* Default Moon when switch is set to light(or sun) */
+.moon-glow {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0%;
+  transition: opacity 350ms ease-in-out;
+}
+
+/* Moon movement */
+input:checked + .slider > .moon{
+  transform: rotatez(180deg);
+  z-index: 1;
+  opacity: 1;
+}
+
+/* glow toggled when swtiched to darkmode */
+input:checked + .slider > .moon > .moon-glow{
+  opacity: 20%;
+}
+
+/* Moon Details */
+.impact-sm{
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 2px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: rgb(200, 200, 200);
+  
+}
+
+
+.impact-md{
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  
+}
+
+.impact-lg{
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  
 }

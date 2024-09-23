@@ -1,0 +1,35 @@
+.footer__container {
+    padding: 2rem;
+    background-color: #1d1d1f;
+}
+
+.footer__container p {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.footer__container a {
+    color: #11b1d3;
+    text-decoration: none;
+}
+
+
+.footer__container ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 8px;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+
+.footer__container ul li {
+    font-size: 2.7rem;
+    transition: ease .3s;
+}
+
+.footer__container ul li:hover {
+    color: rgb(7, 235, 215);
+    transform: scale(1.2);
+}
