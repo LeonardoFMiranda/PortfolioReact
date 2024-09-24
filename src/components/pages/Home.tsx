@@ -30,7 +30,7 @@ const SectionBox = styled.section`
   margin-bottom: 5rem;
   border: 2px solid #0c91ae;
   border-radius: 0.4rem;
-  background-color: #0b0909;
+  background-color: var(--card-box-color);
 
   transition: ease 0.5s;
 `
@@ -50,12 +50,12 @@ function Home() {
               A summary of all achievements developed to date.
             </p>
             <div className="achivs__container">
+              {/* <SmallCard projectNumber={8} projectType={"Projetos Autorais"} />
               <SmallCard projectNumber={8} projectType={"Projetos Autorais"} />
               <SmallCard projectNumber={8} projectType={"Projetos Autorais"} />
               <SmallCard projectNumber={8} projectType={"Projetos Autorais"} />
               <SmallCard projectNumber={8} projectType={"Projetos Autorais"} />
-              <SmallCard projectNumber={8} projectType={"Projetos Autorais"} />
-              <SmallButtonBox buttonTitle={"Explore my portfolio"} />
+              <SmallButtonBox buttonTitle={"Explore my portfolio"} /> */}
             </div>
           </div>
         </SectionBox>

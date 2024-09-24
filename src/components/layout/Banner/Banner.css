@@ -55,7 +55,7 @@
 
 .banner__text {
   padding: 62px 12px;
-  background-color: rgb(11, 9, 9);
+  background-color: var(--card-box-color);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
   width: 100%;
   
@@ -65,9 +65,16 @@
   font-size: 1.5rem;
   letter-spacing: 2px;
   text-align: center;
+  color: var(--fnt-color-primary);
 }
 .bracket__icon {
-  color: yellow;
+  color: #11b1d3;
+}
+
+.title_banner {
+  background: var(--banner-fnt-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes slideInFromLeft {

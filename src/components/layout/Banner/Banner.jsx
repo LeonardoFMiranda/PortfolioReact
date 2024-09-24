@@ -13,9 +13,9 @@ function Banner() {
     <div className="container__banner">
       <div>
         <div className="banner__intro">
-          <p className="title_banner">{t('banner.row1')}</p>
-          <h1 className="title_banner">{t('banner.row2')}</h1>
-          <h2 className="title_banner">{t('banner.row3')}</h2>
+          <p className="title_banner montserrat">{t('banner.row1')}</p>
+          <h1 className="title_banner montserrat">{t('banner.row2')}</h1>
+          <h2 className="title_banner montserrat">{t('banner.row3')}</h2>
         </div>
         <div className="socials__links">
           <a

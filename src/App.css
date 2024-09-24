@@ -1,3 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+/* Default Light mode colors */
+:root {
+  --clr-primary: rgb(236, 236, 236);
+  --bx-clr-dark: rgb(200, 200, 200);
+  --bx-clr-light: rgb(244, 244, 244);
+  --border-trail: #dceff8;
+  --bd-bg-gradient: linear-gradient(to bottom, #fa8f91 0%, #fedc4d 100%);
+  --box-color: #3e82b8;
+  --card-box-color:#edf8fc;
+  --card-border-color:#0c91ae;
+  --section-sm-box-color:#edf8fc;
+  --fnt-color-primary:#110f10;
+  --banner-fnt-color:#3e82b8;
+}
+
+/* Dark mode colors */
+.darkmode {
+  --section-sm-box-color:rgb(11, 9, 9);
+  --card-box-color:#110f10;
+  --card-border-color:#0c91ae;
+  --clr-primary: rgb(50, 50, 50);
+  --bx-clr-dark: rgb(35, 35, 35);
+  --bx-clr-light: rgb(55, 55, 55);
+  --box-color: #fff;
+  --bd-bg-gradient: linear-gradient(to bottom, #1B2735 0%, #090A0F 100%);
+  --dm-fnt-color: #fff;
+  --tb-color: -webkit-linear-gradient(white, #38495a);
+  --border-trail: #110f10;
+  --fnt-color-primary:#fff;
+  --banner-fnt-color:-webkit-linear-gradient(white, #38495a);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
   border: 10px solid transparent;
@@ -38,22 +79,7 @@
     transform: rotate(360deg);
   }
 }
-/* Default Light mode colors */
-:root{
-  
-  --clr-primary: rgb(236, 236, 236);
-  --bx-clr-dark: rgb(200, 200, 200);
-  --bx-clr-light: rgb(244, 244, 244);
- 
-}
 
-/* Dark mode colors */ 
-.darkmode{
-  --clr-primary: rgb(50, 50, 50);
-  --bx-clr-dark: rgb(35, 35, 35);
-  --bx-clr-light: rgb(55, 55, 55);
-
-}
 
 /* Center the button */
 .center{
@@ -61,6 +87,8 @@
   top: 50%;
   left: 50%;
   transform: scale(1.5);
+  border: 2px solid var(--box-color);
+  border-radius: 16px;
 }
 
 
@@ -77,13 +105,12 @@
   width: 50px;
   height: 25px;
   border-radius: 16px;
-  box-shadow: 3px 3px 5px var(--bx-clr-dark), -3px -3px 5px var(--bx-clr-light);
+  
   
 }
 
 /* Default Slider Styling */
 .slider {
-  box-shadow: 3px 3px 5px var(--bx-clr-dark), -3px -3px 5px var(--bx-clr-light);
   position: absolute;
   top: 2px;
   left: 5px;
@@ -111,10 +138,11 @@ input:checked + .slider{
 /* ========================= Sun ========================*/
 
 .sun{
-  background-color: rgb(213, 204, 39);
+  background-color: #3e82b8;
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  box-shadow: 2px 2px 2px var(--bx-clr-dark), -2px -2px -2px var(--bx-clr-light);
   position: absolute;
   transition: all 350ms ease-in-out;
 }
@@ -127,6 +155,7 @@ input:checked + .slider > .sun{
 
 /*Sun glow when toggled to light(or sun) mode*/
 .sun-glow{
+  box-shadow: 0 0 3px 2.5px #3e82b8;
   width: inherit;
   height: inherit;
   border-radius: 50%;
@@ -151,12 +180,14 @@ input:checked + .slider > .sun > .sun-glow{
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  box-shadow: 2px 2px 2px var(--bx-clr-dark), -2px -2px -2px var(--bx-clr-light);
   transition: all 350ms ease-in-out;
 }
 
 /* Default Moon when switch is set to light(or sun) */
 .moon-glow {
   position: absolute;
+  box-shadow: 0 0 3px 2.5px rgb(220, 220, 230);
   width: inherit;
   height: inherit;
   border-radius: 50%;
@@ -197,6 +228,7 @@ input:checked + .slider > .moon > .moon-glow{
   width: 5px;
   height: 5px;
   border-radius: 50%;
+  background-color: rgb(195, 195, 215);
   
 }
 
@@ -207,5 +239,29 @@ input:checked + .slider > .moon > .moon-glow{
   width: 6px;
   height: 6px;
   border-radius: 50%;
+  background-color: rgb(200, 200, 200);
   
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: transparent;
+    box-shadow: 0 0 0 0 var(--border-trail);
+  }
+  25% {
+    border-color: var(--border-trail);
+    box-shadow: 0 0 10px 5px var(--border-trail);
+  }
+  50% {
+    border-color: transparent;
+    box-shadow: 0 0 0 0 var(--border-trail);
+  }
+  75% {
+    border-color: var(--border-trail);
+    box-shadow: 0 0 10px 5px var(--border-trail);
+  }
+  100% {
+    border-color: transparent;
+    box-shadow: 0 0 0 0 var(--border-trail);
+  }
 }

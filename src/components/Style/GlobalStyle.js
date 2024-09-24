@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
   }
   body, html {
     margin: 0;
@@ -14,17 +13,46 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
-  #main-container {
-    position: fixed; /* Fixa o contêiner principal */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Altura fixa para evitar crescimento infinito */
-    background: linear-gradient(to bottom, #1B2735 0%, #090A0F 100%);
-    pointer-events: none; /* Permite interação com o conteúdo abaixo */
-    z-index: -1; /* Coloca o contêiner atrás do conteúdo */
-    overflow: hidden;
-  }
+#main-container {
+  position: fixed; /* Fixa o contêiner principal */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Altura fixa para evitar crescimento infinito */
+  pointer-events: none; /* Permite interação com o conteúdo abaixo */
+  z-index: -1; /* Coloca o contêiner atrás do conteúdo */
+  overflow: hidden;
+}
+
+#main-container::before,
+#main-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease;
+  z-index: -1;
+}
+
+#main-container::before {
+  background: linear-gradient(to bottom,#bcdef8 , #fdf5ec); /* Gradiente do modo claro */
+  opacity: 1;
+}
+
+#main-container::after {
+  background: linear-gradient(to bottom, black 0%, black 100%); /* Gradiente do modo escuro */
+  opacity: 0;
+}
+
+.darkmode #main-container::before {
+  opacity: 0;
+}
+
+.darkmode #main-container::after {
+  opacity: 1;
+}
 
   #content {
     position: relative;
@@ -36,11 +64,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 
-.title_banner {
-  background: -webkit-linear-gradient(white, #38495a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .Button {
   background: 4px solid white;

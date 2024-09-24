@@ -2,16 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+
 }
 
 body {
   margin: 0;
   background-color: #131314;
-  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
@@ -19,25 +17,4 @@ code {
     monospace;
 }
 
-@keyframes borderAnimation {
-  0% {
-    border-color: transparent;
-    box-shadow: 0 0 0 0 #1a4b72;
-  }
-  25% {
-    border-color: #1a4b72;
-    box-shadow: 0 0 10px 5px #1a4b72;
-  }
-  50% {
-    border-color: transparent;
-    box-shadow: 0 0 0 0 #1a4b72;
-  }
-  75% {
-    border-color: #1a4b72;
-    box-shadow: 0 0 10px 5px #1a4b72;
-  }
-  100% {
-    border-color: transparent;
-    box-shadow: 0 0 0 0 #1a4b72;
-  }
-}
+

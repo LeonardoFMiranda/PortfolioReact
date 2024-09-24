@@ -24,7 +24,7 @@ const HeaderWrapper = styled.header`
 
   &.fixed {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(28,28,31,0.8);
   top: 0;
   left: 0;
   right: 0;
@@ -73,7 +73,7 @@ const HeaderLi = styled.li`
 
 const LogoStyle = styled(Link)`
   font-size: 3rem;
-  color: #fff;
+  color: #3e82b8;
   font-family: "Orbitron", sans-serif;
   font-weight: 800;
   letter-spacing: -0.4rem;
@@ -92,7 +92,7 @@ const NavbarItem = styled(Link)`
   
   }
   @media screen and (min-width: 1024px) {
-    color: #fff;
+    color: var(--fnt-color-primary);
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 3px;
@@ -134,7 +134,7 @@ const NavbarSubMenuList = styled.ul`
 
 
 const NavbarItemDropdown = styled.div`
-  color:#fff !important;
+  color:var(--fnt-color-primary) !important;
   text-transform:uppercase;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -154,7 +154,7 @@ const NavbarItemDropdown = styled.div`
       }
   }
   @media screen and (min-width: 1024px) {
-    color: #fff;
+    color: var(--fnt-color-primary);
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 3px;
@@ -164,7 +164,7 @@ const NavbarItemDropdown = styled.div`
 `
 
 const NavbarItemButton = styled.button`
-  color: #fff;
+  color: var(--fnt-color-primary);
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 3px;
@@ -179,12 +179,14 @@ const NavbarItemButton = styled.button`
 
 
 
-const Header = () => {
+const Header = ({ darkMode, onDarkModeToggle }) => {
   const [menuOpen, setMenuOpen] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(true);
   const [isFixed, setIsFixed] = useState(false);
   const { translation, i18n: { changeLanguage, language } } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(language)
+  
+
 
   const handleChangeLanguage = () => {
     const newLanguage = currentLanguage === 'pt' ? 'en' : 'pt'
@@ -219,6 +221,8 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  
 
   return (
     <>
@@ -281,21 +285,21 @@ const Header = () => {
               <HeaderLi>
                 <div className="center">
                   <label class="switch">
-                    <input id="darkModeToggle" type="checkbox"/>
-                      <div class="slider" >
+                    <input id="darkModeToggle" type="checkbox" checked={darkMode} onChange={onDarkModeToggle} />
+                    <div class="slider" >
 
-                        <div class="sun">
-                          <div class="sun-glow"></div>
-                        </div>
-
-                        <div class="moon">
-                          <div class="moon-glow"></div>
-                          <div class="impact-sm"></div>
-                          <div class="impact-md"></div>
-                          <div class="impact-lg"></div>
-                        </div>
-
+                      <div class="sun">
+                        <div class="sun-glow"></div>
                       </div>
+
+                      <div class="moon">
+                        <div class="moon-glow"></div>
+                        <div class="impact-sm"></div>
+                        <div class="impact-md"></div>
+                        <div class="impact-lg"></div>
+                      </div>
+
+                    </div>
                   </label>
                 </div>
               </HeaderLi>

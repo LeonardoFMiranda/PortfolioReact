@@ -5,9 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('darkmode');
+});
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <App />
