@@ -22,14 +22,6 @@ const HeaderWrapper = styled.header`
   padding: 20px;
   z-index: 1000;
 
-  &.fixed {
-  position: fixed;
-  background-color: rgba(28,28,31,0.8);
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  transition: background-color 0.5s ease-in-out;
 }
 `;
 
@@ -48,6 +40,7 @@ const ItemsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  
 `
 
 
@@ -86,11 +79,11 @@ const NavbarItem = styled(Link)`
     text-transform:uppercase;
     transition: 0.4s all ease 0s;
     border: 1px solid transparent;
-  &:hover{
-  background-color: #11b1d3;
-  border: 1px solid #11b1d3;
-  
-  }
+    &:hover{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    
+    }
   @media screen and (min-width: 1024px) {
     color: var(--fnt-color-primary);
     text-decoration: none;
@@ -107,7 +100,7 @@ const NavbarSubMenuLi = styled.li`
     text-align: start;
     padding:8px 0 ;
     &:hover{
-      background-color: #0c91ae;
+      background-color: var(--secondary-color);
     }
 `
 
@@ -141,13 +134,13 @@ const NavbarItemDropdown = styled.div`
   transition: 0.4s all ease 0s;
   border: 1px solid transparent;
   &:hover{
-    background-color: #11b1d3;
-    border: 1px solid #11b1d3;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     ${NavbarSubMenuList} {
       display: block;
       list-style-type: none;
       position: absolute;
-      top: 73px;
+      top: 51px;
       list-style-type: none !important;
       padding: 0 !important;
       background-color: rgb(11, 9, 9);
@@ -185,7 +178,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
   const [isFixed, setIsFixed] = useState(false);
   const { translation, i18n: { changeLanguage, language } } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(language)
-  
+
 
 
   const handleChangeLanguage = () => {
@@ -222,13 +215,13 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
     };
   }, []);
 
-  
+
 
   return (
     <>
       <header className={isFixed ? 'fixed' : 'container__header'}>
         <NavbarWrapper>
-          <ItemsWrapper>
+          <ItemsWrapper className="item-wrapper">
             <span>
               <LogoStyle to={"/"}>LM</LogoStyle>
             </span>

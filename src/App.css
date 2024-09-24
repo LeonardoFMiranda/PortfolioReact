@@ -5,31 +5,42 @@
   --clr-primary: rgb(236, 236, 236);
   --bx-clr-dark: rgb(200, 200, 200);
   --bx-clr-light: rgb(244, 244, 244);
+  --fnt-color-primary: #110f10;
+  --secondary-color:#3e82b8;
+  --header-fnt-color: #fff;
+  --fnt-off-color: #edf8fc;
   --border-trail: #dceff8;
   --bd-bg-gradient: linear-gradient(to bottom, #fa8f91 0%, #fedc4d 100%);
   --box-color: #3e82b8;
-  --card-box-color:#edf8fc;
-  --card-border-color:#0c91ae;
-  --section-sm-box-color:#edf8fc;
-  --fnt-color-primary:#110f10;
-  --banner-fnt-color:#3e82b8;
+  --card-box-color: #edf8fc;
+  --card-border-color: #0c91ae;
+  --section-sm-box-color: #edf8fc;
+  --banner-fnt-color: #3e82b8;
+  --footer-bg-color:#edf8fc;
+  --bd-bg-default: #fdf5ec;
 }
 
 /* Dark mode colors */
 .darkmode {
-  --section-sm-box-color:rgb(11, 9, 9);
-  --card-box-color:#110f10;
-  --card-border-color:#0c91ae;
+  --section-sm-box-color: rgb(11, 9, 9);
+  --card-box-color: #110f10;
+  --card-border-color: #0c91ae; 
+  --fnt-color-primary: #fff;
+  --header-fnt-color: #fff;
+  --fnt-off-color: #edf8fc;
   --clr-primary: rgb(50, 50, 50);
   --bx-clr-dark: rgb(35, 35, 35);
   --bx-clr-light: rgb(55, 55, 55);
+  --secondary-color:#3e82b8;
   --box-color: #fff;
   --bd-bg-gradient: linear-gradient(to bottom, #1B2735 0%, #090A0F 100%);
   --dm-fnt-color: #fff;
   --tb-color: -webkit-linear-gradient(white, #38495a);
   --border-trail: #110f10;
-  --fnt-color-primary:#fff;
-  --banner-fnt-color:-webkit-linear-gradient(white, #38495a);
+ 
+  --banner-fnt-color: -webkit-linear-gradient(white, #38495a);
+  --footer-bg-color:rgba(28,28,31,0.9);
+  --bd-bg-default: black;
 }
 
 body {
@@ -37,12 +48,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: var(--bd-bg-default);
 }
 
 .App {
   text-align: center;
+  position: relative;
   border: 10px solid transparent;
-    animation: borderAnimation 8s linear infinite;
+  animation: borderAnimation 3s linear infinite;
 }
 
 .App-logo {
@@ -75,6 +88,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -82,7 +96,7 @@ body {
 
 
 /* Center the button */
-.center{
+.center {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -92,21 +106,21 @@ body {
 }
 
 
-.switch input{
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
 /* Default Switch Styling */
-.switch{
+.switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 25px;
   border-radius: 16px;
-  
-  
+
+
 }
 
 /* Default Slider Styling */
@@ -124,20 +138,20 @@ body {
 
 }
 
-.switch:hover{
+.switch:hover {
   cursor: pointer;
-  
+
 }
 
 /* Move the center of switch */
-input:checked + .slider{
+input:checked+.slider {
   transform: translatex(20px);
-  
+
 }
 
 /* ========================= Sun ========================*/
 
-.sun{
+.sun {
   background-color: #3e82b8;
   width: 20px;
   height: 20px;
@@ -148,13 +162,13 @@ input:checked + .slider{
 }
 
 /* Sun movement on toggle*/
-input:checked + .slider > .sun{
+input:checked+.slider>.sun {
   transform: rotatez(180deg);
   pointer-events: none;
 }
 
 /*Sun glow when toggled to light(or sun) mode*/
-.sun-glow{
+.sun-glow {
   box-shadow: 0 0 3px 2.5px #3e82b8;
   width: inherit;
   height: inherit;
@@ -165,14 +179,14 @@ input:checked + .slider > .sun{
 }
 
 /* When toggled to dark */
-input:checked + .slider > .sun > .sun-glow{
+input:checked+.slider>.sun>.sun-glow {
   opacity: 0;
 }
 
 
 /* ========================= Moon ========================*/
 
-.moon{
+.moon {
   z-index: 5;
   opacity: 0;
   position: absolute;
@@ -197,19 +211,19 @@ input:checked + .slider > .sun > .sun-glow{
 }
 
 /* Moon movement */
-input:checked + .slider > .moon{
+input:checked+.slider>.moon {
   transform: rotatez(180deg);
   z-index: 1;
   opacity: 1;
 }
 
 /* glow toggled when swtiched to darkmode */
-input:checked + .slider > .moon > .moon-glow{
+input:checked+.slider>.moon>.moon-glow {
   opacity: 20%;
 }
 
 /* Moon Details */
-.impact-sm{
+.impact-sm {
   position: absolute;
   margin-left: 8px;
   margin-top: 2px;
@@ -217,11 +231,11 @@ input:checked + .slider > .moon > .moon-glow{
   height: 2px;
   border-radius: 50%;
   background-color: rgb(200, 200, 200);
-  
+
 }
 
 
-.impact-md{
+.impact-md {
   position: absolute;
   margin-left: 12px;
   margin-top: 5px;
@@ -229,10 +243,10 @@ input:checked + .slider > .moon > .moon-glow{
   height: 5px;
   border-radius: 50%;
   background-color: rgb(195, 195, 215);
-  
+
 }
 
-.impact-lg{
+.impact-lg {
   position: absolute;
   margin-left: 10px;
   margin-top: 12px;
@@ -240,28 +254,29 @@ input:checked + .slider > .moon > .moon-glow{
   height: 6px;
   border-radius: 50%;
   background-color: rgb(200, 200, 200);
-  
+
 }
 
 @keyframes borderAnimation {
   0% {
     border-color: transparent;
     box-shadow: 0 0 0 0 var(--border-trail);
+    border-image: linear-gradient(90deg, transparent, transparent) 1;
   }
   25% {
-    border-color: var(--border-trail);
+    border-image: linear-gradient(90deg, var(--border-trail), transparent) 1;
     box-shadow: 0 0 10px 5px var(--border-trail);
   }
   50% {
-    border-color: transparent;
+    border-image: linear-gradient(180deg, transparent, var(--border-trail)) 1;
     box-shadow: 0 0 0 0 var(--border-trail);
   }
   75% {
-    border-color: var(--border-trail);
+    border-image: linear-gradient(270deg, var(--border-trail), transparent) 1;
     box-shadow: 0 0 10px 5px var(--border-trail);
   }
   100% {
-    border-color: transparent;
+    border-image: linear-gradient(360deg, transparent, transparent) 1;
     box-shadow: 0 0 0 0 var(--border-trail);
   }
 }

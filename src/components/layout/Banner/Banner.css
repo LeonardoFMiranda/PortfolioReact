@@ -7,8 +7,8 @@
   flex-direction: column;
   gap: 4.8rem;
   transition: 0.3s all linear;
-  animation: slideInFromLeft 1s ease-out;
 }
+
 
 .banner__intro {
   display: flex;
@@ -52,14 +52,58 @@
   transform: scale(1.2);
 }
 
-
+.banner__text-container{
+  position: relative;
+  width: 550px;
+  height: 250px;
+}
 .banner__text {
   padding: 62px 12px;
   background-color: var(--card-box-color);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
   width: 100%;
+  position: absolute;
+  overflow: hidden; 
+  z-index: 0;
+  /* Border Radius */
+	border-radius: 10px;
   
 }
+
+.banner__text:before {
+  content: '';
+  z-index: -2;
+  text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+	width: 99999px;
+	height: 99999px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+  /*border color, change middle color*/
+	background-image: conic-gradient(rgba(0,0,0,0), #3e82b8, rgba(0,0,0,0) 25%);
+  /* change speed here */
+	animation: rotate 4s linear infinite;
+}
+
+.banner__text:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+  /* border width */
+	left: 5px;
+	top: 5px;
+  /* double the px from the border width left */
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+  /*bg color*/
+	background: var(--card-box-color);
+  /*box border radius*/
+	border-radius: 7px;
+}
+
 
 .text {
   font-size: 1.5rem;
@@ -77,16 +121,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
 
 
 @media screen and (min-width: 768px) {
@@ -104,8 +139,12 @@
 @media screen and (min-width: 1024px) {
     .container__banner{
         width: 1200px;
-        margin: auto;
+        margin:20rem auto;
         flex-direction: row;
+    }
+
+    .slideInFromLeft {
+      animation: slideInFromLeft 1s ease-out;
     }
 
     .socials__links{
@@ -113,7 +152,7 @@
     }
 
     .banner__text {
-        width: auto;
+        width: 100%;
         height: fit-content;
       }
   }

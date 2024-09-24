@@ -5,7 +5,7 @@ import styled from "styled-components";
 function Footer() {
   return (
     <footer className="footer__container">
-      <p className="text-center">Created by <a href="/">Leonardo Miranda</a></p>
+      <p className="text-center footer__text">Created by <a href="/">Leonardo Miranda</a></p>
       <ul>
         <li>
           <a

@@ -5,6 +5,7 @@ import Navbar from './components/layout/Header/Header';
 import Home from './components/pages/Home';
 import Footer from './components/layout/Footer/Footer';
 import GlobalStyle from './components/Style/GlobalStyle';
+import './components/Style/animations.css'
 import './App.css'; // Import the CSS file
 import './i18n.ts'
 import StarCanvas from './components/layout/BackgroundStars/Stars';

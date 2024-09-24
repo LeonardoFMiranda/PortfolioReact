@@ -1,10 +1,10 @@
 .footer__container {
-    padding: 2rem;
-    background-color: #1d1d1f;
+    padding: 0.7rem;
+    background-color: var(--footer-bg-color);
 }
 
 .footer__container p {
-    color: #fff;
+    color: var(--fnt-color-primary);
     letter-spacing: 2px;
 }
 

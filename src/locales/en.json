@@ -10,6 +10,9 @@
             "row2": "Leonardo Miranda",
             "row3": "FullStack Developer",
             "title": "Turning ideas into code."
+        },
+        "home": {
+            "hardskills-description": "Technologies and frameworks that are constantly improving my projects."
         }
     }
 }

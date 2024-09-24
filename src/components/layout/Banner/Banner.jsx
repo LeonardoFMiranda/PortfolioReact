@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Banner.css";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
@@ -8,10 +8,36 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 function Banner() {
 
   const { translation, i18n: { changeLanguage, language } } = useTranslation();
+  const bannerIntroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slideInFromLeft');
+          } else {
+            entry.target.classList.remove('slideInFromLeft');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (bannerIntroRef.current) {
+      observer.observe(bannerIntroRef.current);
+    }
+
+    return () => {
+      if (bannerIntroRef.current) {
+        observer.unobserve(bannerIntroRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div className="container__banner">
-      <div>
+    <div className="container__banner" ref={bannerIntroRef}>
+      <div >
         <div className="banner__intro">
           <p className="title_banner montserrat">{t('banner.row1')}</p>
           <h1 className="title_banner montserrat">{t('banner.row2')}</h1>
@@ -36,12 +62,14 @@ function Banner() {
         </div>
       </div>
 
-      <div className="banner__text">
-        <p className="text">
-          <span className="bracket__icon">❴ </span>
-          {t('banner.title')}
-          <span className="bracket__icon"> ❵</span>
-        </p>
+      <div className="banner__text-container">
+        <div className="banner__text">
+          <p className="text">
+            <span className="bracket__icon">❴ </span>
+            {t('banner.title')}
+            <span className="bracket__icon"> ❵</span>
+          </p>
+        </div>
       </div>
     </div>
   );

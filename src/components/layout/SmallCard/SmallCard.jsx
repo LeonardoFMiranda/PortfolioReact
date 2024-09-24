@@ -1,11 +1,11 @@
 import React from 'react'
 import './SmallCard.css'
 
-function SmallCard({projectNumber,projectType}) {
+function SmallCard({hardSkillLogo,hardSkillNome}) {
   return (
     <div className='smallBox'>
-        <h2>{projectNumber}</h2>
-        <h3>{projectType}</h3>
+        <img src={hardSkillLogo} alt="" />
+        <h3>{hardSkillNome}</h3>
     </div>
   )
 }
