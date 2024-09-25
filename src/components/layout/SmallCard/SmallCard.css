@@ -1,18 +1,14 @@
 .smallBox {
-  background-color: #1d1d1f;
+  background-color: var(--sm-box-bg);
   border-radius: .4rem;
-  
-
   width: 6.25rem;
   padding: 0.9rem;
-  
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-
   text-align: center;
+  transition: background 0.3s ease;
 }
 
 .smallBox img {
@@ -21,8 +17,8 @@
 }
 
 .smallBox h3 {
-  color: #fff;
-  font-weight: 300;
+  color: var(--fnt-color-primary);
+  font-weight: 600;
   font-size: 16px;
 }
 

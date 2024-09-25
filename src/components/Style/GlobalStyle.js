@@ -98,6 +98,30 @@ svg {
   text-transform: uppercase;
 }
 
+.portfolio-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: var(--fnt-color-primary);
+    background-color: var(--sm-box-bg);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0px rgba(0, 255, 255, 0.5);
+}
+
+.portfolio-btn:hover {
+    background-color: var(--card-box-color);
+    box-shadow: 0 0 20px var(--default-blue-color), 
+    0 0 40px var(--default-blue-color), 
+    0 0 60px var(--default-blue-color);
+    transition: all 0.3s ease;
+}
+
+
+
 
 `;
 

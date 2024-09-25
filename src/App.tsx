@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/layout/Header/Header';
-import Home from './components/pages/Home';
+import Home from './components/pages/Home/Home';
 import Footer from './components/layout/Footer/Footer';
 import GlobalStyle from './components/Style/GlobalStyle';
 import './components/Style/animations.css'
@@ -10,6 +10,7 @@ import './App.css'; // Import the CSS file
 import './i18n.ts'
 import './components/Style/mediaScreen.css'
 import StarCanvas from './components/layout/BackgroundStars/Stars';
+import Rotas from './routes/routes';
 
 
 
@@ -48,9 +49,7 @@ function App() {
         <BrowserRouter>
           <GlobalStyle />
           <Navbar darkMode={darkMode} onDarkModeToggle={handleDarkModeToggle} />
-          <Routes>
-            <Route path='/' element={<Home />}></Route>
-          </Routes>
+          <Rotas />
           <Footer />
         </BrowserRouter>
       </div>

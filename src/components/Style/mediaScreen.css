@@ -14,7 +14,7 @@
     .container__banner {
         width: 1200px;
         margin: 20rem auto;
-        flex-direction: row;
+        flex-direction: row !important;
     }
 
     .slideInFromLeft {
@@ -104,9 +104,14 @@
         color: #0b0909;
     }
 
-    .box__neon {
+    .hard-skill__box {
         width: 800px;
-        height: 650px;
+        height: 450px;
+    }
+
+    .portfolio__box {
+        width: 800px;
+        height: 400px;
     }
 
     .smallBox {

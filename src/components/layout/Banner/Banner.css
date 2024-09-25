@@ -43,12 +43,12 @@
   padding:1.2rem;
 }
 .socials__links .link {
-  color: #11b1d3;
+  color: var(--default-blue-color);
   font-size: 2.7rem;
   transition: ease .3s;
 }
 .socials__links .link:hover {
-  color: rgb(7, 235, 215);
+  color: var(--fnt-color-primary);
   transform: scale(1.2);
 }
 

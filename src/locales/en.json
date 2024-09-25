@@ -12,7 +12,9 @@
             "title": "Turning ideas into code."
         },
         "home": {
-            "hardskills-description": "Technologies and frameworks that are constantly improving my projects."
+            "hardskills-description": "Technologies and frameworks that are constantly improving my projects.",
+            "portfolio-title": "Portfolio",
+            "portfolio-description": "Here you can check out my projects, just click the button below:"
         }
     }
 }

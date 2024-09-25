@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
-import Banner from "../layout/Banner/Banner";
-import SmallCard from "../layout/SmallCard/SmallCard";
-import SmallButtonBox from "../layout/SmallButtonBox/SmallButtonBox";
+import Banner from "../../layout/Banner/Banner";
+import SmallCard from "../../layout/SmallCard/SmallCard";
+import SmallButtonBox from "../../layout/SmallButtonBox/SmallButtonBox";
 import lucifer from "../../assets/img/image3.png"
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { MyData } from "../interface/profile";
+import { MyData } from "../../interface/profile";
+import ProgrammerIcon from "../../../assets/icons/Programming-icon.svg"
 
 const MainContainer = styled.div`
   margin-top: 6.5rem;
@@ -25,7 +26,7 @@ const SectionContainers = styled.div`
   padding: 1rem;
 `
 
-const SectionBox = styled.section`
+const SectionItem = styled.section`
   position: relative;
   z-index: 1;
   width: 97%;
@@ -95,15 +96,15 @@ function Home() {
     <MainContainer className="">
       <Banner />
       <SectionContainers>
-        <div className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[0] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[0] = el)} >
+        <section className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[0] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[0] = el)} >
           <span className="container__title">
             <h3 className="FST__font">Hard Skills</h3>
           </span>
-          <div className="box__neon" >
-            <SectionBox>
+          <div className="box__neon hard-skill__box" >
+            <SectionItem>
               <div className="content__wrap">
                 <p className="content__title">
-                {t('home.hardskills-description')}
+                  {t('home.hardskills-description')}
                 </p>
                 <div className="achivs__container">
                   {myData && myData.skills.hardSkills.map((hardSkill) => (
@@ -117,27 +118,33 @@ function Home() {
                   ))}
                 </div>
               </div>
-            </SectionBox>
+            </SectionItem>
           </div>
-        </div>
+        </section>
 
-        <div className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[1] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[1] = el)}>
+        <section className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[1] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[1] = el)}>
           <span className="container__title">
-            <h3 className="FST__font">Last Upload</h3>
+            <h3 className="FST__font">{t('home.portfolio-title')}</h3>
           </span>
-          <div className="box__neon">
+          <div className="box__neon portfolio__box">
+
             <section className="section__box">
               <div className="content__wrap">
-                <p className="content__title">Latest project I developed:</p>
                 <div className="project__container">
                   <div className="projectImg__container">
-                    <img src={lucifer} alt="" />
+                    <img src={ProgrammerIcon} alt="" />
                   </div>
+                </div>
+              </div>
+              <div className="content__wrap" style={{ height: "80%" }}>
+                <p className="content__title text-center">{t('home.portfolio-description')}</p>
+                <div className="text-center mt-4">
+                  <button className="portfolio-btn fw-boldw">Ver Projetos</button>
                 </div>
               </div>
             </section>
           </div>
-        </div>
+        </section>
 
         <section className="third__section"></section>
       </SectionContainers>
