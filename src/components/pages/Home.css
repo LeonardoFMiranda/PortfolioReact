@@ -20,8 +20,6 @@
 
 .box__neon {
   position: relative;
-  width: 700px;
-  height: 600px;
   background-color: var(--card-box-color);
   display: flex;
   border-radius: 0.4rem;
@@ -30,8 +28,15 @@
   overflow: hidden;
 }
 
-.container__teste {
+.neon__container {
   position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.neon__container.visible {
+  opacity: 1;
 }
 
 .box__neon::before {
@@ -40,7 +45,7 @@
   position: absolute;
   width: 200px;
   height: 200%;
-  background: linear-gradient(to bottom, tomato 0%, tomato 100%);
+  background: linear-gradient(to bottom, #3e82b8 0%, #3e82b8 100%);
   animation: rotateNeonBox 4s linear infinite;
   
 }
@@ -55,7 +60,7 @@
 }
 
 .section__box {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   z-index: 4;
   /* Border Radius */
@@ -67,40 +72,6 @@
   border: 2px solid #0c91ae;
   border-radius: 0.4rem;
   transition: ease 0.5s;
-}
-
-.section__box:before {
-  content: '';
-  z-index: -2;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  position: absolute;
-  width: 99999px;
-  height: 99999px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  /*border color, change middle color*/
-  background-image: conic-gradient(rgba(0, 0, 0, 0), #3e82b8, rgba(0, 0, 0, 0) 25%);
-  /* change speed here */
-  animation: rotate 4s linear infinite;
-}
-
-.section__box:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  /* border width */
-  left: 5px;
-  top: 5px;
-  /* double the px from the border width left */
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  /*bg color*/
-  background: var(--card-box-color);
-  /*box border radius*/
-  border-radius: 7px;
 }
 
 .last-update__container{

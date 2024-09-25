@@ -33,13 +33,27 @@ const GlobalStyle = createGlobalStyle`
   width: 100%;
   height: 100%;
   transition: opacity 1s ease;
+  animation: moveGradient 1s ease-in-out infinite;
   z-index: -1;
 }
 
 #main-container::before {
   background: linear-gradient(to bottom,#bcdef8 , #fdf5ec); /* Gradiente do modo claro */
   opacity: 1;
+  
 }
+
+@keyframes moveGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
 
 #main-container::after {
   background: linear-gradient(to bottom, black 0%, black 100%); /* Gradiente do modo escuro */

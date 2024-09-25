@@ -136,25 +136,6 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-    .container__banner{
-        width: 1200px;
-        margin:20rem auto;
-        flex-direction: row;
-    }
 
-    .slideInFromLeft {
-      animation: slideInFromLeft 1s ease-out;
-    }
-
-    .socials__links{
-        justify-content: flex-start;
-    }
-
-    .banner__text {
-        width: 100%;
-        height: fit-content;
-      }
-  }
 
 

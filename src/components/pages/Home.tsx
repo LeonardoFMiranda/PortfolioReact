@@ -18,6 +18,7 @@ const MainContainer = styled.div`
 
 const SectionContainers = styled.div`
   margin-top: 5rem;
+  gap:20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,8 +28,8 @@ const SectionContainers = styled.div`
 const SectionBox = styled.section`
   position: relative;
   z-index: 1;
-  width: 98%;
-  height:98%;
+  width: 97%;
+  height:97%;
   padding: 1rem;
   border: 2px solid #0c91ae;
   border-radius: 0.4rem;
@@ -36,11 +37,21 @@ const SectionBox = styled.section`
   transition: ease 0.5s;
 `
 
+const NeonContainer = styled.div`
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+`;
+
 
 function Home() {
-  const sectionIntroRef = useRef(null);
+  const sectionIntroRefs = useRef<(Element | null)[]>([]);
   const { t, i18n: { changeLanguage, language } } = useTranslation();
   const [myData, setMyData] = useState<MyData>()
+  const [visibleSections, setVisibleSections] = useState<Element[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,20 +62,48 @@ function Home() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => [...prev, entry.target as Element]);
+          } else {
+            setVisibleSections((prev) => prev.filter((el) => el !== entry.target));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sectionIntroRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      sectionIntroRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
 
   return (
     <MainContainer className="">
       <Banner />
       <SectionContainers>
-        <div className="container__teste">
+        <div className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[0] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[0] = el)} >
           <span className="container__title">
-            <h3 className="FST__font">My Achievements</h3>
+            <h3 className="FST__font">Hard Skills</h3>
           </span>
-          <div className="box__neon">
+          <div className="box__neon" >
             <SectionBox>
               <div className="content__wrap">
                 <p className="content__title">
-                  A summary of all achievements developed to date.
+                {t('home.hardskills-description')}
                 </p>
                 <div className="achivs__container">
                   {myData && myData.skills.hardSkills.map((hardSkill) => (
@@ -82,7 +121,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="container__teste">
+        <div className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[1] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[1] = el)}>
           <span className="container__title">
             <h3 className="FST__font">Last Upload</h3>
           </span>
@@ -99,17 +138,6 @@ function Home() {
             </section>
           </div>
         </div>
-
-        <section className="section__box">
-          <div className="content__wrap">
-            <p className="content__title">Latest project I developed:</p>
-            <div className="project__container">
-              <div className="projectImg__container">
-                <img src={lucifer} alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section className="third__section"></section>
       </SectionContainers>

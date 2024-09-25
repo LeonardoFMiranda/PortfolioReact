@@ -1,0 +1,124 @@
+@media screen and (min-width: 768px) {
+    .menu__box {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .fixed nav .item-wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container__banner {
+        width: 1200px;
+        margin: 20rem auto;
+        flex-direction: row;
+    }
+
+    .slideInFromLeft {
+        animation: slideInFromLeft 1s ease-out;
+    }
+
+    .socials__links {
+        justify-content: flex-start;
+    }
+
+    .banner__text {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .container__navbarItens {
+        width: 65rem;
+        margin: auto;
+        padding: 1rem 2.4rem;
+    }
+
+    .navbar__btnIcon {
+        display: none;
+    }
+
+    .container__navbarList {
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .navbar__item {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: 0.4s all ease 0s;
+        border: 1px solid transparent;
+    }
+
+    /* .container__navbarList .navbar__item,
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 3px;
+        cursor: pointer;
+        padding: 0.5rem;
+      } */
+
+    .container__navbarList .navbar__item:hover {
+        background-color: #11b1d3;
+        border: 1px solid #11b1d3;
+    }
+
+    .navbar__submenu {
+        display: none;
+        position: relative;
+    }
+
+    .navbar__item:hover .navbar__submenu {
+        display: block;
+
+        position: absolute;
+        top: 68px;
+        list-style-type: none;
+        background-color: rgb(11, 9, 9);
+    }
+
+    .submenu__item {
+        transition: 0.4s all ease 0s;
+        width: 100%;
+        text-align: start;
+    }
+
+    .submenu__item:hover {
+        background-color: #0c91ae;
+    }
+
+    .navbar__submenu .submenu__item a {
+        display: block;
+        font-weight: 300;
+        padding: 8px 20px;
+        width: 100%;
+    }
+
+    .submenu__item:hover a {
+        color: #0b0909;
+    }
+
+    .box__neon {
+        width: 800px;
+        height: 650px;
+    }
+
+    .smallBox {
+        width: 10rem;
+      }
+
+    .smallBox img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .smallBox h3 {
+        font-size: 1.5rem;
+      }
+}

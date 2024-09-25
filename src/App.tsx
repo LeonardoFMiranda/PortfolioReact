@@ -8,6 +8,7 @@ import GlobalStyle from './components/Style/GlobalStyle';
 import './components/Style/animations.css'
 import './App.css'; // Import the CSS file
 import './i18n.ts'
+import './components/Style/mediaScreen.css'
 import StarCanvas from './components/layout/BackgroundStars/Stars';
 
 
