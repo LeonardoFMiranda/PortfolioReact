@@ -8,13 +8,13 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { MyData } from "../../interface/profile";
 import ProgrammerIcon from "../../../assets/icons/Programming-icon.svg"
+import { Link } from "react-router-dom";
 
 const MainContainer = styled.div`
   margin-top: 6.5rem;
   color: #fff;
   display: flex;
   flex-direction: column;
-  
 `
 
 const SectionContainers = styled.div`
@@ -57,8 +57,8 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/profile.json')
-        .then((response) => response.json())
-        .then((data) => setMyData(data))
+        .then((response :any) => response.json())
+        .then((data: any) => setMyData(data))
     }
     fetchData()
   }, [])
@@ -139,7 +139,7 @@ function Home() {
               <div className="content__wrap" style={{ height: "80%" }}>
                 <p className="content__title text-center">{t('home.portfolio-description')}</p>
                 <div className="text-center mt-4">
-                  <button className="portfolio-btn fw-boldw">Ver Projetos</button>
+                  <Link to={'/Portfólio'} style={{textDecoration:"none"}} className="portfolio-btn fw-boldw">{t('home.portfolio-button')}</Link>
                 </div>
               </div>
             </section>

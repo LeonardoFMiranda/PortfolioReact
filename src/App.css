@@ -20,6 +20,7 @@
   --bd-bg-default: #fdf5ec;
   --sm-box-bg: #bcdef8;
   --default-blue-color: #3e82b8;
+  --fnt-color-primary-opacity:rgb(17, 15, 16,0.8);
 }
 
 /* Dark mode colors */
@@ -39,12 +40,20 @@
   --dm-fnt-color: #fff;
   --tb-color: -webkit-linear-gradient(white, #38495a);
   --border-trail: #110f10;
-
   --banner-fnt-color: -webkit-linear-gradient(white, #38495a);
   --footer-bg-color: rgba(28, 28, 31, 0.9);
   --bd-bg-default: black;
   --sm-box-bg: #1d1d1f;
   --default-blue-color: #3e82b8;
+  --fnt-color-primary-opacity:rgb(255, 255, 255,0.8);
+}
+
+.fnt-color-primary {
+  color: var(--fnt-color-primary);
+}
+
+.fnt-color-white {
+  color: var(--header-fnt-color);
 }
 
 body {

@@ -33,12 +33,13 @@ const GlobalStyle = createGlobalStyle`
   width: 100%;
   height: 100%;
   transition: opacity 1s ease;
-  animation: moveGradient 1s ease-in-out infinite;
+  animation: moveGradient 8s ease-in-out infinite;
   z-index: -1;
 }
 
 #main-container::before {
   background: linear-gradient(to bottom,#bcdef8 , #fdf5ec); /* Gradiente do modo claro */
+  background-size: 100% 200%; /* Permite que o gradiente se mova */
   opacity: 1;
   
 }
@@ -74,12 +75,6 @@ const GlobalStyle = createGlobalStyle`
     color: white; /* Ajuste a cor conforme necessário */
   }
 
-
-
-
-
-
-
 .Button {
   background: 4px solid white;
   border: none;
@@ -98,26 +93,9 @@ svg {
   text-transform: uppercase;
 }
 
-.portfolio-btn {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: var(--fnt-color-primary);
-    background-color: var(--sm-box-bg);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 0px rgba(0, 255, 255, 0.5);
-}
-
-.portfolio-btn:hover {
-    background-color: var(--card-box-color);
-    box-shadow: 0 0 20px var(--default-blue-color), 
-    0 0 40px var(--default-blue-color), 
-    0 0 60px var(--default-blue-color);
-    transition: all 0.3s ease;
+.divider{
+  height: 4px;
+  background-color: var(--default-blue-color);
 }
 
 

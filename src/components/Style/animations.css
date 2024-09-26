@@ -44,30 +44,16 @@
     }
 }
 
-@keyframes neon-flicker {
+
+
+@keyframes moveGradient {
     0% {
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 
-                    0 0 20px rgba(0, 255, 255, 0.6), 
-                    0 0 30px rgba(0, 255, 255, 0.4);
-    }
-    25% {
-        box-shadow: 0 0 5px rgba(0, 255, 255, 0.2),
-                    0 0 10px rgba(0, 255, 255, 0.1), 
-                    0 0 15px rgba(0, 255, 255, 0.05);
+      background-position: 0% 0%;
     }
     50% {
-        box-shadow: 0 0 30px rgba(0, 255, 255, 1), 
-                    0 0 60px rgba(0, 255, 255, 0.9), 
-                    0 0 90px rgba(0, 255, 255, 0.7);
-    }
-    75% {
-        box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), 
-                    0 0 10px rgba(0, 255, 255, 0.2), 
-                    0 0 15px rgba(0, 255, 255, 0.1);
+      background-position: 0% 100%;
     }
     100% {
-        box-shadow: 0 0 0px rgba(0, 255, 255, 0.05), 
-                    0 0 0px rgba(0, 255, 255, 0.02);
+      background-position: 0% 0%;
     }
-}
-
+  }

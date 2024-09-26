@@ -1,0 +1,7 @@
+.project__small-card{
+    border: 1px solid var(--card-box-color);
+    border-radius: 8px;
+    color: var(--fnt-color-primary-opacity);
+    font-size: 14px;
+    padding: 4px 8px;
+}

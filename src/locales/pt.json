@@ -14,7 +14,15 @@
         "home": {
             "hardskills-description": "Tecnologias e frameworks que estão constantemente aprimorando meus projetos.",
             "portfolio-title": "Portfólio",
-            "portfolio-description": "Aqui você pode conferir meus projetos, basta clicar no botão abaixo:"
+            "portfolio-description": "Aqui você pode conferir meus projetos, basta clicar no botão abaixo:",
+            "portfolio-button": "Ver Projetos:"
+        },
+        "portfolio": {
+            "page-title": "Portfólio",
+            "page-description": "Projetos que desenvolvi ao longo da minha jornada",
+            "overlay-text": "Ver mais"
+
         }
+        
     }
 }

@@ -116,7 +116,7 @@
 
     .smallBox {
         width: 10rem;
-      }
+    }
 
     .smallBox img {
         width: 64px;
@@ -125,5 +125,9 @@
 
     .smallBox h3 {
         font-size: 1.5rem;
-      }
+    }
+
+    .projects-container {
+        width: 1200px !important;
+    }
 }
