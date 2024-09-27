@@ -1,9 +1,13 @@
 {
     "translation":{
         "header":{
-            "About":"Sobre mim",
-            "Contact":"Contato",
-            "Language": "IDIOMA"
+            "About":"SOBRE MIM",
+            "AboutMe":"SOBRE MIM",
+            "Contact":"CONTATO",
+            "Language": "IDIOMA",
+            "Certificados": "CERTIFICADOS",
+            "Portfolio": "PORTFÓLIO"
+            
         },
         "banner": {
             "row1": "Olá! eu sou",
@@ -15,14 +19,25 @@
             "hardskills-description": "Tecnologias e frameworks que estão constantemente aprimorando meus projetos.",
             "portfolio-title": "Portfólio",
             "portfolio-description": "Aqui você pode conferir meus projetos, basta clicar no botão abaixo:",
-            "portfolio-button": "Ver Projetos:"
+            "portfolio-button": "Ver Projetos:",
+            "contact": "Contato",
+            "contact-title": "Entre em contato preenchendo os campos abaixo",
+            "contact-button": "Enviar",
+            "contact-placehouder-name": "Nome",
+            "contact-placehouder-email": "E-mail",
+            "contact-placehouder-message": "Mensagem"
         },
         "portfolio": {
             "page-title": "Portfólio",
             "page-description": "Projetos que desenvolvi ao longo da minha jornada",
             "overlay-text": "Ver mais"
-
+        },
+        "certificado": {
+            "page-title": "Certificados",
+            "page-description": "Meu conhecimentos e habilidades",
+            "overlay-text": "Ver mais"
         }
+        
         
     }
 }

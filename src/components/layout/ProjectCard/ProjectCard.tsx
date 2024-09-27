@@ -29,7 +29,7 @@ function ProjectCard({ ProjectName, ProjectDescription, ProjectImg, ProjectUrl, 
                 <div className="overlay">
                     <h3 className='fnt-color-white fw-bold '>{ProjectName}</h3>
                     <span>{ProjectDescription}</span>
-                    <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer" className="overlay-button">
+                    <a href={ProjectUrl} target="_blank" rel="noopener noreferrer" className="overlay-button">
                         <FontAwesomeIcon icon={faArrowCircleUp} size="2x" /> {t('portfolio.overlay-text')}
                     </a>
                 </div>

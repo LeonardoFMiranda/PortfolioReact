@@ -63,7 +63,7 @@
 
 .container__menu {
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -73,7 +73,7 @@
 
 .menu__box {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 0.8rem 1.2rem;
   background-color: rgb(11, 9, 9,0.8);
   position: relative;
@@ -103,11 +103,8 @@
   justify-content: flex-start;
 }
 
-.menu__item:hover {
-  border: 1px solid #11b1d3;
-}
-
-.menu__item a {
+.menu__item a,
+.menu__item button {
   color: #fff;
   font-weight: 400;
   text-decoration: none;

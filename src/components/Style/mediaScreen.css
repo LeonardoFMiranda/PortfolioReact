@@ -130,4 +130,12 @@
     .projects-container {
         width: 1200px !important;
     }
+
+    .certificados-container {
+        width: 1200px !important;
+    }
+
+    .box__neon::after {
+        inset: 8px !important;
+      }
 }

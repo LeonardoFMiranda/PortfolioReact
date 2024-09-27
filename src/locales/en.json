@@ -1,9 +1,12 @@
 {
     "translation": {
         "header": {
-            "About": "About",
-            "Contact": "Contact",
-            "Language": "LANGUAGE"
+            "About": "ABOUT",
+            "AboutMe":"ABOUT ME",
+            "Contact": "CONTACT",
+            "Language": "LANGUAGE",
+            "Certificados": "CERTIFICATES",
+            "Portfolio": "PORTFOLIO"
         },
         "banner": {
             "row1": "Hey! I'm",
@@ -15,13 +18,22 @@
             "hardskills-description": "Technologies and frameworks that are constantly improving my projects.",
             "portfolio-title": "Portfolio",
             "portfolio-description": "Here you can check out my projects, just click the button below:",
-            "portfolio-button": "See Projects:"
+            "portfolio-button": "See Projects:",
+            "contact": "Contact",
+            "contact-title": " Get in touch by filling out the fields below",
+            "contact-button": "Send",
+            "contact-placehouder-name": "Name",
+            "contact-placehouder-email": "E-mail",
+            "contact-placehouder-message": "Message"
         },
         "portfolio": {
             "page-title": "Portfolio",
             "page-description": "Projects I developed throughout my journey",
             "overlay-text": "See more"
-
+        },
+        "certificado": {
+            "page-title": "Certificates",
+            "page-description": "My knowledge and skills"
         }
     }
 }

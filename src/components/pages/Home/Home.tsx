@@ -8,7 +8,8 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { MyData } from "../../interface/profile";
 import ProgrammerIcon from "../../../assets/icons/Programming-icon.svg"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 
 const MainContainer = styled.div`
   margin-top: 6.5rem;
@@ -19,6 +20,7 @@ const MainContainer = styled.div`
 
 const SectionContainers = styled.div`
   margin-top: 5rem;
+  margin-bottom: 5rem;
   gap:20rem;
   display: flex;
   flex-direction: column;
@@ -47,21 +49,72 @@ const NeonContainer = styled.div`
   }
 `;
 
+const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+`;
+
+const Input = styled.input`
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+`;
+
+const TextArea = styled.textarea`
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+`;
+
+const Button = styled.button`
+  color:var(--fnt-color-primary);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--sm-box-bg);
+  outline: 3px solid transparent;
+  transition: background 1s, outline 1s, transform 1s;
+  background-size: 250%;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+`;
 
 function Home() {
   const sectionIntroRefs = useRef<(Element | null)[]>([]);
   const { t, i18n: { changeLanguage, language } } = useTranslation();
   const [myData, setMyData] = useState<MyData>()
   const [visibleSections, setVisibleSections] = useState<Element[]>([]);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
       await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/profile.json')
-        .then((response :any) => response.json())
+        .then((response: any) => response.json())
         .then((data: any) => setMyData(data))
     }
     fetchData()
   }, [])
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -91,6 +144,29 @@ function Home() {
       });
     };
   }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeoCh1-Iw22p7DMu-od66zBclt6l4Wk-GMWGWy1C6QtEnKNXg/formResponse';
+    const formData = new FormData();
+    formData.append('entry.1187180635', name); // Substitua pelo ID do campo "Name"
+    formData.append('entry.1082201105', email); // Substitua pelo ID do campo "Email"
+    formData.append('entry.986492936', message); // Substitua pelo ID do campo "Message"
+
+    fetch(formUrl, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(() => {
+      alert('Message sent successfully!');
+      setName('');
+      setEmail('');
+      setMessage('');
+    }).catch((error) => {
+      alert('Error sending message.');
+      console.error('Error:', error);
+    });
+  };
 
   return (
     <MainContainer className="">
@@ -128,7 +204,7 @@ function Home() {
           </span>
           <div className="box__neon portfolio__box">
 
-            <section className="section__box">
+            <section className="section__box flex-column flex-md-row">
               <div className="content__wrap">
                 <div className="project__container">
                   <div className="projectImg__container">
@@ -139,14 +215,47 @@ function Home() {
               <div className="content__wrap" style={{ height: "80%" }}>
                 <p className="content__title text-center">{t('home.portfolio-description')}</p>
                 <div className="text-center mt-4">
-                  <Link to={'/Portfólio'} style={{textDecoration:"none"}} className="portfolio-btn fw-boldw">{t('home.portfolio-button')}</Link>
+                  <Link to={'/Portfólio'} style={{ textDecoration: "none" }} className="portfolio-btn fw-boldw">{t('home.portfolio-button')}</Link>
                 </div>
               </div>
             </section>
           </div>
         </section>
 
-        <section className="third__section"></section>
+        <section id="contact" className={`neon__container ${visibleSections.includes(sectionIntroRefs.current[2] as Element) ? 'visible' : ''}`} ref={(el) => (sectionIntroRefs.current[2] = el)}>
+          <span className="container__title">
+            <h3 className="FST__font">{t('home.contact')}</h3>
+          </span>
+          <div className="box__neon portfolio__box">
+
+            <SectionItem>
+              <h2 className="mt-3 fnt-color-primary">{t('home.contact-title')}</h2>
+              <ContactForm onSubmit={handleSubmit}>
+                <Input
+                  type="text"
+                  placeholder={t('home.contact-placehouder-name')}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <Input
+                  type="email"
+                  placeholder={t('home.contact-placehouder-email')}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <TextArea
+                  placeholder={t('home.contact-placehouder-message')}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+                <Button type="submit">{t('home.contact-button')}</Button>
+              </ContactForm>
+            </SectionItem>
+          </div>
+        </section>
       </SectionContainers>
     </MainContainer>
   );

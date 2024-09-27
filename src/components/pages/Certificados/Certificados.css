@@ -1,0 +1,32 @@
+.box__teste {
+    width: 300px;
+    height: 300px;
+    z-index: 5;
+    background: linear-gradient(to bottom, #000, #fdf5ec);
+    background-size: 100% 200%; /* Permite que o gradiente se mova */
+    animation: gradient-move 8s linear infinite;
+}
+
+.certificado-title {
+    letter-spacing: 3px;
+    font-weight: 700;  
+}
+
+.certificado-subtitle{
+    color: var(--fnt-color-primary-opacity);
+    font-weight: 600;
+}
+
+.certificados-container{
+    position: relative;
+    width: 400px;
+}
+
+.certificados-box{
+    z-index: 5;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+

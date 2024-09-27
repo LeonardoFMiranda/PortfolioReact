@@ -21,6 +21,7 @@
   --sm-box-bg: #bcdef8;
   --default-blue-color: #3e82b8;
   --fnt-color-primary-opacity:rgb(17, 15, 16,0.8);
+  --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
 }
 
 /* Dark mode colors */

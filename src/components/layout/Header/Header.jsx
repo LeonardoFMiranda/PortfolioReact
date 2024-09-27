@@ -111,7 +111,7 @@ const NavbarSubMenuItem = styled(Link)`
     border: 1px solid transparent;
 
   @media screen and (min-width: 1024px) {
-    color:#fff;
+    color:var(--fnt-color-primary);
     text-decoration:none;
     font-weight: 300;
     padding: 8px 20px;
@@ -143,7 +143,7 @@ const NavbarItemDropdown = styled.div`
       top: 51px;
       list-style-type: none !important;
       padding: 0 !important;
-      background-color: rgb(11, 9, 9);
+      background-color: var(--card-box-color);
       }
   }
   @media screen and (min-width: 1024px) {
@@ -259,7 +259,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                       <NavbarSubMenuItem to={"/"}>ABOUT ME</NavbarSubMenuItem>
                     </NavbarSubMenuLi>
                     <NavbarSubMenuLi>
-                      <NavbarSubMenuItem to={"/"}>CERTIFICATES</NavbarSubMenuItem>
+                      <NavbarSubMenuItem to={"/certificados"}>CERTIFICATES</NavbarSubMenuItem>
                     </NavbarSubMenuLi>
                   </NavbarSubMenuList>
                 </NavbarItemDropdown>
@@ -267,7 +267,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
               </HeaderLi>
 
               <HeaderLi>
-                <NavbarItem to={"/"}>{t('header.Contact')}</NavbarItem>
+                <NavbarItem to={"/#contact"}>{t('header.Contact')}</NavbarItem>
               </HeaderLi>
 
               <HeaderLi>
@@ -393,11 +393,11 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                         <Link to={"/"}>FEED</Link>
                       </li>
                       <li className="menu__item">
-                        <Link>PORTFOLIO</Link>
+                        <Link to={"/portfólio"}>{t('header.Portfolio')}</Link>
                       </li>
                       <li className="menu__item" onClick={toggleDropDown}>
                         <div className="item__dropdown">
-                          ABOUT
+                          {t('header.About')}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="1em"
@@ -418,13 +418,21 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                         </div>
                         {!dropdownOpen && (
                           <ul className="submenu__list">
-                            <li className="submenu__item">ABOUT ME</li>
-                            <li className="submenu__item">CERTIFICATES</li>
+                            <li className="submenu__item">{t('header.AboutMe')}</li>
+                            <li className="submenu__item">
+                              <Link to={"/certificados"}>{t('header.Certificados')}</Link>
+                            </li>
                           </ul>
                         )}
                       </li>
                       <li className="menu__item">
-                        <Link>CONTACT</Link>
+                        <Link style={{ textTransform: "uppercase" }} to={"/#contact"}>{t('header.Contact')}</Link>
+                      </li>
+                      <li className="menu__item">
+                        <div>
+                          <img style={{ width: "32px" }} src={currentLanguage === 'pt' ? BRFlag : EUAFlag} alt="Language flag" />
+                          <NavbarItemButton onClick={handleChangeLanguage}>{t('header.Language')}</NavbarItemButton>
+                        </div>
                       </li>
                     </ul>
                   </div>

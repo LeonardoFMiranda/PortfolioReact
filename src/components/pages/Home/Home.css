@@ -31,7 +31,7 @@
 .neon__container {
   position: relative;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 2s ease-in-out;
 
 }
 
@@ -43,9 +43,12 @@
   content: '';
   text-align: center;
   position: absolute;
-  width: 200px;
+  /* width: 200px;
   height: 400%;
-  background: linear-gradient(to bottom, #3e82b8 0%, #3e82b8 100%);
+  background: linear-gradient(to bottom, #3e82b8 0%, #3e82b8 100%); */
+  width: 99999px;
+  height: 99999px;
+  background-image: conic-gradient(rgba(0, 0, 0, 0), #3e82b8, rgba(0, 0, 0, 0) 25%);
   animation: rotateNeonBox 4s linear infinite;
   
 }
@@ -181,6 +184,9 @@
 }
 
 .fadeIn{
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 4s ease-in-out;
 }
 
+#contact {
+  scroll-margin-top: 200px;
+}
