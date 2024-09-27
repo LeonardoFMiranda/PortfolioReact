@@ -20,8 +20,13 @@
   --bd-bg-default: #fdf5ec;
   --sm-box-bg: #bcdef8;
   --default-blue-color: #3e82b8;
-  --fnt-color-primary-opacity:rgb(17, 15, 16,0.8);
+  --fnt-color-primary-opacity: rgb(17, 15, 16, 0.8);
   --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
+  --primary-color: #000000;
+  --secondary-color: rgba(0, 0, 0, 0.2);
+  --tertiary-color: rgba(0, 0, 0, 0.5);
+  --quaternary-color: rgba(0, 0, 0, 0.7);
+
 }
 
 /* Dark mode colors */
@@ -46,7 +51,11 @@
   --bd-bg-default: black;
   --sm-box-bg: #1d1d1f;
   --default-blue-color: #3e82b8;
-  --fnt-color-primary-opacity:rgb(255, 255, 255,0.8);
+  --fnt-color-primary-opacity: rgb(255, 255, 255, 0.8);
+  --primary-color: #ffffff;
+  --secondary-color: rgba(255, 255, 255, 0.2);
+  --tertiary-color: rgba(255, 255, 255, 0.5);
+  --quaternary-color: rgba(255, 255, 255, 0.7);
 }
 
 .fnt-color-primary {

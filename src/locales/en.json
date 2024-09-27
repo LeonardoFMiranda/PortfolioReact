@@ -24,12 +24,22 @@
             "contact-button": "Send",
             "contact-placehouder-name": "Name",
             "contact-placehouder-email": "E-mail",
-            "contact-placehouder-message": "Message"
+            "contact-placehouder-message": "Message",
+            "ModalTitle": "Success!",
+            "ModalBody": "Thank you for contacting me, I will return your message soon.",
+            "ModalButton": "Close"
         },
         "portfolio": {
             "page-title": "Portfolio",
             "page-description": "Projects I developed throughout my journey",
             "overlay-text": "See more"
+        },
+        "aboutme": {
+            "page-title": "About me",
+            "page-description": " A little of my story",
+            "row1-description":"Hello! My name is Leonardo Ferreira Miranda",
+            "row2-description":"After starting my career in the health area, with a degree in Biomedicine and a postgraduate degree in Imaging Diagnosis from the Instituto Israelita Albert Einstein, I decided, in 2022, to migrate to the technology area due to the growth potential and greater diversity of opportunities.",
+            "row3-description":"I graduated in Systems Analysis and Development and interned at the Municipal Planning Secretariat of Natal, where I actively contributed to the development of a system aimed at all the city's infant educators, with the aim of improving the horizontal promotion process, a project that was requested by COPHEP and SME. As a developer, I had the opportunity to contribute with my codes, ideas and suggestions, which were well received by the development team. This space for innovation allowed me to leave my mark on the project, helping to implement solutions that optimized the system and directly benefited end users."
         },
         "certificado": {
             "page-title": "Certificates",

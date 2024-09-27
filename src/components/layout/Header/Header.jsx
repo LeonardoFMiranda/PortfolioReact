@@ -256,10 +256,10 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                   </svg>
                   <NavbarSubMenuList>
                     <NavbarSubMenuLi>
-                      <NavbarSubMenuItem to={"/"}>ABOUT ME</NavbarSubMenuItem>
+                      <NavbarSubMenuItem to={"/sobre-mim"}>{t('header.AboutMe')}</NavbarSubMenuItem>
                     </NavbarSubMenuLi>
                     <NavbarSubMenuLi>
-                      <NavbarSubMenuItem to={"/certificados"}>CERTIFICATES</NavbarSubMenuItem>
+                      <NavbarSubMenuItem to={"/certificados"}>{t('header.Certificados')}</NavbarSubMenuItem>
                     </NavbarSubMenuLi>
                   </NavbarSubMenuList>
                 </NavbarItemDropdown>
@@ -418,7 +418,9 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                         </div>
                         {!dropdownOpen && (
                           <ul className="submenu__list">
-                            <li className="submenu__item">{t('header.AboutMe')}</li>
+                            <li className="submenu__item" >
+                              <Link to={"/sobre-mim"}>{t('header.AboutMe')}</Link>
+                            </li>
                             <li className="submenu__item">
                               <Link to={"/certificados"}>{t('header.Certificados')}</Link>
                             </li>

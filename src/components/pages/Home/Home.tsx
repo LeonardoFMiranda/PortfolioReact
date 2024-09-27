@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { MyData } from "../../interface/profile";
 import ProgrammerIcon from "../../../assets/icons/Programming-icon.svg"
 import { Link, useLocation } from "react-router-dom";
-
+import { Modal, Button } from 'react-bootstrap';
 
 const MainContainer = styled.div`
   margin-top: 6.5rem;
@@ -70,7 +70,7 @@ const TextArea = styled.textarea`
   border-radius: 0.4rem;
 `;
 
-const Button = styled.button`
+const ButtonContact = styled.button`
   color:var(--fnt-color-primary);
   padding: 0.5rem 1rem;
   border: none;
@@ -85,6 +85,17 @@ const Button = styled.button`
   }
 `;
 
+const HomeModal = styled(Modal)`
+  .modal-content {
+    background-color: var(--card-box-color) !important;
+    color: var(--fnt-color-primary);
+  }
+  .modal-footer button {
+    background-color: var(--sm-box-bg);
+    color: var(--fnt-color-primary);
+  }
+`;
+
 function Home() {
   const sectionIntroRefs = useRef<(Element | null)[]>([]);
   const { t, i18n: { changeLanguage, language } } = useTranslation();
@@ -94,6 +105,7 @@ function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const location = useLocation();
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -158,7 +170,7 @@ function Home() {
       body: formData,
       mode: 'no-cors'
     }).then(() => {
-      alert('Message sent successfully!');
+      setShow(true)
       setName('');
       setEmail('');
       setMessage('');
@@ -167,6 +179,8 @@ function Home() {
       console.error('Error:', error);
     });
   };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <MainContainer className="">
@@ -251,12 +265,25 @@ function Home() {
                   onChange={(e) => setMessage(e.target.value)}
                   required
                 />
-                <Button type="submit">{t('home.contact-button')}</Button>
+                <ButtonContact type="submit">{t('home.contact-button')}</ButtonContact>
+                
               </ContactForm>
             </SectionItem>
           </div>
         </section>
       </SectionContainers>
+
+      <HomeModal show={show} onHide={handleClose}>
+        <HomeModal.Header closeButton>
+          <HomeModal.Title>{t('home.ModalTitle')}</HomeModal.Title>
+        </HomeModal.Header>
+        <HomeModal.Body>{t('home.ModalBody')}</HomeModal.Body>
+        <HomeModal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+          {t('home.ModalButton')}
+          </Button>
+        </HomeModal.Footer>
+      </HomeModal>
     </MainContainer>
   );
 }

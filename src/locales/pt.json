@@ -1,13 +1,12 @@
 {
-    "translation":{
-        "header":{
-            "About":"SOBRE MIM",
-            "AboutMe":"SOBRE MIM",
-            "Contact":"CONTATO",
+    "translation": {
+        "header": {
+            "About": "SOBRE MIM",
+            "AboutMe": "SOBRE MIM",
+            "Contact": "CONTATO",
             "Language": "IDIOMA",
             "Certificados": "CERTIFICADOS",
             "Portfolio": "PORTFÓLIO"
-            
         },
         "banner": {
             "row1": "Olá! eu sou",
@@ -25,19 +24,27 @@
             "contact-button": "Enviar",
             "contact-placehouder-name": "Nome",
             "contact-placehouder-email": "E-mail",
-            "contact-placehouder-message": "Mensagem"
+            "contact-placehouder-message": "Mensagem",
+            "ModalTitle": "Sucesso!",
+            "ModalBody": "Obrigado por entrar em contato, em breve retornarei sua mensagem.",
+            "ModalButton": "Fechar"
         },
         "portfolio": {
             "page-title": "Portfólio",
             "page-description": "Projetos que desenvolvi ao longo da minha jornada",
             "overlay-text": "Ver mais"
         },
+        "aboutme": {
+            "page-title": "Sobre mim",
+            "page-description": "Um pouco da minha história",
+            "row1-description":"Ola! Me chamo Leonardo Ferreira Miranda",
+            "row2-description":"Após iniciar minha carreira na área da saúde, com graduação em Biomedicina e pós-graduação em Diagnóstico por Imagem pelo Instituto Israelita Albert Einstein, decidi, em 2022, migrar para a área de tecnologia devido ao potencial de crescimento e maior diversidade de oportunidades.",
+            "row3-description":"Me formei em Análise e Desenvolvimento de Sistemas e estagiei na Secretaria Municipal de Planejamento de Natal, onde contribuí ativamente no desenvolvimento de um sistema voltado para os educadores infantis de toda a cidade, com o objetivo de aprimorar o processo de promoção horizontal, projeto esse que foi solicitade pela COPHEP e pela SME. Como desenvolvedor, tive a oportunidade de contribuir com meus códigos, ideias e sugestões, que foram bem recebidas pela equipe de desenvolvimento. Esse espaço para inovação me permitiu deixar minha marca no projeto, ajudando a implementar soluções que otimizaram o sistema e beneficiaram diretamente os usuários finais."
+        },
         "certificado": {
             "page-title": "Certificados",
             "page-description": "Meu conhecimentos e habilidades",
             "overlay-text": "Ver mais"
         }
-        
-        
     }
 }

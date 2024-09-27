@@ -32,16 +32,20 @@ function Certificados() {
     const { t, i18n } = useTranslation();
     const [certificadoData, setCertificadoData] = useState<any>()
     const { pathname } = useLocation();
+    const [loadingPage, setLoadingPage] = useState<boolean | null>(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, [pathname]);
+    }, [pathname]);
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/certificates.json');
             const data: MyCertificados = await response.json();
             setCertificadoData(data)
+            if (data) {
+                setLoadingPage(true);
+            }
 
             // Adiciona as traduções dinamicamente
             i18n.addResourceBundle('en', 'translation', {
@@ -69,6 +73,15 @@ function Certificados() {
 
         fetchData();
     }, [i18n]);
+
+
+    if (loadingPage === null) {
+        return (
+            <div style={{ height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <p className="loader"></p>
+            </div>
+        )
+    }
 
     return (
         <MainContainer>

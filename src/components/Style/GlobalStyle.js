@@ -98,7 +98,16 @@ svg {
   background-color: var(--default-blue-color);
 }
 
-
+.loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+}
 
 
 `;

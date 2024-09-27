@@ -29,6 +29,7 @@ function Portfolio() {
   const { t, i18n } = useTranslation();
   const [myData, setMyData] = useState<MyPortfolio>()
   const { pathname } = useLocation();
+  const [loadingPage, setLoadingPage] = useState<boolean | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,6 +40,9 @@ function Portfolio() {
       const response = await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/portfolio.json');
       const data: MyPortfolio = await response.json();
       setMyData(data);
+      if (data) {
+        setLoadingPage(true);
+      }
 
       // Adiciona as traduções dinamicamente
       i18n.addResourceBundle('en', 'translation', {
@@ -71,6 +75,13 @@ function Portfolio() {
     fetchData();
   }, [i18n]);
 
+  if (loadingPage === null) {
+    return (
+      <div style={{ height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <p className="loader"></p>
+      </div>
+    )
+  }
 
 
   return (
