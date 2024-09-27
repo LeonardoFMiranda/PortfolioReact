@@ -6,7 +6,7 @@ function seededRandom(seed: number) {
   let c = 12345;
   let state = seed;
 
-  return function() {
+  return function () {
     state = (a * state + c) % m;
     return state / (m - 1);
   };
@@ -20,7 +20,7 @@ const StarCanvas: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
     const canvas = canvasRef.current;
     if (canvas) {
       const ctx = canvas.getContext('2d');
-      
+
       const cloudCount = 20; // Número de nuvens animadas
       const stars: { x: number; y: number; size: number; alpha: number; speed: number }[] = [];
       const clouds: { x: number; y: number; size: number; speed: number }[] = [];
@@ -40,25 +40,25 @@ const StarCanvas: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
 
       // Função para desenhar uma nuvem
       const drawCloud = (x: number, y: number, size: number) => {
-  if (ctx) {
-    ctx.beginPath();
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        if (ctx) {
+          ctx.beginPath();
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
 
-    // Desenha várias elipses sobrepostas para criar uma nuvem cartunesca
-    ctx.ellipse(x, y, size * 1.5, size, 0, 0, 2 * Math.PI);
-    ctx.ellipse(x + size, y, size * 1.5, size, 0, 0, 2 * Math.PI);
-    ctx.ellipse(x - size, y, size * 1.5, size, 0, 0, 2 * Math.PI);
-    ctx.ellipse(x + size / 2, y - size / 2, size * 1.2, size * 0.8, 0, 0, 2 * Math.PI);
-    ctx.ellipse(x - size / 2, y - size / 2, size * 1.2, size * 0.8, 0, 0, 2 * Math.PI);
+          // Desenha várias elipses sobrepostas para criar uma nuvem cartunesca
+          ctx.ellipse(x, y, size * 1.5, size, 0, 0, 2 * Math.PI);
+          ctx.ellipse(x + size, y, size * 1.5, size, 0, 0, 2 * Math.PI);
+          ctx.ellipse(x - size, y, size * 1.5, size, 0, 0, 2 * Math.PI);
+          ctx.ellipse(x + size / 2, y - size / 2, size * 1.2, size * 0.8, 0, 0, 2 * Math.PI);
+          ctx.ellipse(x - size / 2, y - size / 2, size * 1.2, size * 0.8, 0, 0, 2 * Math.PI);
 
-    // Adiciona mais elipses para formas variadas
-    ctx.ellipse(x + size / 3, y + size / 3, size * 1.1, size * 0.9, 0, 0, 2 * Math.PI);
-    ctx.ellipse(x - size / 3, y + size / 3, size * 1.1, size * 0.9, 0, 0, 2 * Math.PI);
-    ctx.ellipse(x, y + size / 2, size * 1.3, size * 0.7, 0, 0, 2 * Math.PI);
+          // Adiciona mais elipses para formas variadas
+          ctx.ellipse(x + size / 3, y + size / 3, size * 1.1, size * 0.9, 0, 0, 2 * Math.PI);
+          ctx.ellipse(x - size / 3, y + size / 3, size * 1.1, size * 0.9, 0, 0, 2 * Math.PI);
+          ctx.ellipse(x, y + size / 2, size * 1.3, size * 0.7, 0, 0, 2 * Math.PI);
 
-    ctx.fill();
-  }
-};
+          ctx.fill();
+        }
+      };
 
       // Função para animar as estrelas
       const animateStars = () => {
@@ -124,6 +124,7 @@ const StarCanvas: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
         if (canvas) {
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
+          console.log("Canvas width:", canvas.width, "Canvas height:", canvas.height);
         }
       };
 

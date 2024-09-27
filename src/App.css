@@ -280,6 +280,14 @@ input:checked+.slider>.moon>.moon-glow {
 
 }
 
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @keyframes borderAnimation {
   0% {
     border-color: transparent;
