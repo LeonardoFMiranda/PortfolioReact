@@ -122,9 +122,12 @@ const StarCanvas: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
       // Ajusta o tamanho do canvas
       const resizeCanvas = () => {
         if (canvas) {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-          console.log("Canvas width:", canvas.width, "Canvas height:", canvas.height);
+          canvas.width = window.innerWidth * window.devicePixelRatio;
+          canvas.height = window.innerHeight * window.devicePixelRatio;
+
+          // Ajusta o estilo CSS para ocupar a tela inteira
+          canvas.style.width = `${window.innerWidth}px`;
+          canvas.style.height = `${window.innerHeight}px`;
         }
       };
 
