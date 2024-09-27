@@ -143,7 +143,7 @@ const StarCanvas: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
     }
   }, [darkMode]);
 
-  return <canvas ref={canvasRef} id="star-canvas" />;
+  return <canvas ref={canvasRef} id="star-canvas" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh' }} />;
 };
 
 export default StarCanvas;

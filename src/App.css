@@ -288,6 +288,15 @@ canvas {
   height: 100%;
 }
 
+#star-canvas {
+  position: fixed; /* Garante que ele fique preso na tela inteira */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupa a largura total da viewport */
+  height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+
 @keyframes borderAnimation {
   0% {
     border-color: transparent;
