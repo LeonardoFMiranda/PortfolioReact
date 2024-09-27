@@ -15,9 +15,16 @@ function Banner() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('slideInFromLeft');
+            if (window.matchMedia("(min-width: 1366px)").matches) {
+              entry.target.classList.add('slideInFromLeft');
+              entry.target.classList.remove('fadeIn');
+            } else {
+              entry.target.classList.add('fadeIn');
+              entry.target.classList.remove('slideInFromLeft');
+            }
           } else {
             entry.target.classList.remove('slideInFromLeft');
+            entry.target.classList.remove('fadeIn');
           }
         });
       },

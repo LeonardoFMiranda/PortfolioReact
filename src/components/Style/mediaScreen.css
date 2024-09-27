@@ -17,9 +17,6 @@
         flex-direction: row !important;
     }
 
-    .slideInFromLeft {
-        animation: slideInFromLeft 1s ease-out;
-    }
 
     .socials__links {
         justify-content: flex-start;
@@ -141,5 +138,11 @@
 
     .box__neon::after {
         inset: 8px !important;
-      }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .slideInFromLeft {
+        animation: slideInFromLeft 1s ease-out;
+    }
 }
