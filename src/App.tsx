@@ -32,13 +32,21 @@ function App() {
       localStorage.setItem('darkMode', 'enabled');
     }
   };
-
+  {/* <StarCanvas darkMode={darkMode} /> */ }
   return (
     <>
       <div id="main-container">
-        {darkMode && <StarCanvas darkMode={darkMode} />}
+        {darkMode && (
+          <>
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+          </>
+        )}
       </div>
+
       <div className="App" id="content">
+
         <BrowserRouter>
           <GlobalStyle />
           <Navbar darkMode={darkMode} onDarkModeToggle={handleDarkModeToggle} />
