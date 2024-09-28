@@ -10,6 +10,7 @@ import './i18n.ts';
 import './components/Style/mediaScreen.css';
 import StarCanvas from './components/layout/BackgroundStars/Stars';
 import Rotas from './routes/routes';
+import '../../portfolio/src/components/layout/BackgroundStars/Stars.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'enabled');
