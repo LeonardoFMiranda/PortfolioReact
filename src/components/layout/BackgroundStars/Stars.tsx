@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Stars.css'; // Importe o arquivo CSS para as animações
+// import './Stars.css'; // Importe o arquivo CSS para as animações
 
 const StarCanvas: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
   const starCount = 100; // Número de estrelas
