@@ -81,7 +81,7 @@ const ButtonContact = styled.button`
   background-size: 250%;
 
   &:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--lm-secondary-color);
   }
 `;
 
@@ -106,15 +106,6 @@ function Home() {
   const [message, setMessage] = useState('');
   const location = useLocation();
   const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/profile.json')
-        .then((response: any) => response.json())
-        .then((data: any) => setMyData(data))
-    }
-    fetchData()
-  }, [])
 
   useEffect(() => {
     const hash = window.location.hash;

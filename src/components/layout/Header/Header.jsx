@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import "./Navbar.css";
 import styled from "styled-components";
 import EUAFlag from "../../../assets/icons/estados-unidos.png"
@@ -80,8 +81,8 @@ const NavbarItem = styled(Link)`
     transition: 0.4s all ease 0s;
     border: 1px solid transparent;
     &:hover{
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+    background-color: var(--lm-secondary-color);
+    border: 1px solid var(--lm-secondary-color);
     
     }
   @media screen and (min-width: 1024px) {
@@ -100,7 +101,7 @@ const NavbarSubMenuLi = styled.li`
     text-align: start;
     padding:8px 0 ;
     &:hover{
-      background-color: var(--secondary-color);
+      background-color: var(--lm-secondary-color);
     }
 `
 
@@ -134,8 +135,8 @@ const NavbarItemDropdown = styled.div`
   transition: 0.4s all ease 0s;
   border: 1px solid transparent;
   &:hover{
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+    background-color: var(--lm-secondary-color);
+    border: 1px solid var(--lm-secondary-color);
     ${NavbarSubMenuList} {
       display: block;
       list-style-type: none;
@@ -178,7 +179,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
   const [isFixed, setIsFixed] = useState(false);
   const { translation, i18n: { changeLanguage, language } } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(language)
-
+  const navigate = useNavigate();
 
 
   const handleChangeLanguage = () => {
@@ -189,7 +190,6 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log(menuOpen);
   };
 
   const toggleDropDown = () => {
@@ -214,6 +214,25 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const checkIdAndRedirect = (e,id) => {
+    e.preventDefault();
+    setMenuOpen(true);
+    setDropdownOpen(true);
+    if (id === 'home') {
+      navigate('/');
+    } else if (id === 'portfólio') {
+      navigate('/portfólio');
+    } else if (id === 'sobre-mim') {
+      navigate('/sobre-mim');
+    } else if (id === 'certificados') {
+      navigate('/certificados');
+    } else if (id === 'contact') {
+      navigate('/#contact');
+    } else {
+      navigate('/not-found');
+    }
+  };
 
 
 
@@ -390,10 +409,10 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                   <div>
                     <ul className="menu__list">
                       <li className="menu__item">
-                        <Link to={"/"}>FEED</Link>
+                        <Link to={"/"} onClick={(e) => checkIdAndRedirect(e,'home')}>FEED</Link>
                       </li>
                       <li className="menu__item">
-                        <Link to={"/portfólio"}>{t('header.Portfolio')}</Link>
+                        <Link to={"/portfólio"} onClick={(e) => checkIdAndRedirect(e,'portfólio')}>{t('header.Portfolio')}</Link>
                       </li>
                       <li className="menu__item" onClick={toggleDropDown}>
                         <div className="item__dropdown">
@@ -419,16 +438,16 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                         {!dropdownOpen && (
                           <ul className="submenu__list">
                             <li className="submenu__item" >
-                              <Link to={"/sobre-mim"}>{t('header.AboutMe')}</Link>
+                              <Link to={"/sobre-mim"} onClick={(e) => checkIdAndRedirect(e,'sobre-mim')}>{t('header.AboutMe')}</Link>
                             </li>
                             <li className="submenu__item">
-                              <Link to={"/certificados"}>{t('header.Certificados')}</Link>
+                              <Link to={"/certificados"} onClick={(e) => checkIdAndRedirect(e,'certificados')}>{t('header.Certificados')}</Link>
                             </li>
                           </ul>
                         )}
                       </li>
                       <li className="menu__item">
-                        <Link style={{ textTransform: "uppercase" }} to={"/#contact"}>{t('header.Contact')}</Link>
+                        <Link style={{ textTransform: "uppercase" }} to={"/#contact"} onClick={(e) => checkIdAndRedirect(e,'contact')}>{t('header.Contact')}</Link>
                       </li>
                       <li className="menu__item">
                         <div>

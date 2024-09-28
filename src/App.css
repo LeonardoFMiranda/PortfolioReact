@@ -6,7 +6,7 @@
   --bx-clr-dark: rgb(200, 200, 200);
   --bx-clr-light: rgb(244, 244, 244);
   --fnt-color-primary: #110f10;
-  --secondary-color: #3e82b8;
+  --lm-secondary-color: #3e82b8;
   --header-fnt-color: #fff;
   --card-box-color: #edf8fc;
   --fnt-off-color: #edf8fc;
@@ -40,7 +40,7 @@
   --section-sm-box-color: rgb(11, 9, 9);
   --card-border-color: #0c91ae;
   --fnt-off-color: #edf8fc;
-  --secondary-color: #3e82b8;
+  --lm-secondary-color: #3e82b8;
   --box-color: #fff;
   --bd-bg-gradient: linear-gradient(to bottom, #1B2735 0%, #090A0F 100%);
   --dm-fnt-color: #fff;
@@ -123,7 +123,7 @@ body {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  transform: scale(1.5);
+  transform: scale(1.1);
   border: 2px solid var(--box-color);
   border-radius: 16px;
 }
