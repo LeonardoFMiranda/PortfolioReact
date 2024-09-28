@@ -13,6 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
+import DarkMode from "../Darkmode button mobile/DarkMode";
 
 const HeaderWrapper = styled.header`
   position: absolute;
@@ -38,10 +39,12 @@ const NavbarWrapper = styled.nav`
 
 const ItemsWrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  
+  @media screen and (min-width: 1024px) {
+    justify-content: space-evenly;
+  }
 `
 
 
@@ -463,10 +466,10 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
           </ItemsWrapper>
         </NavbarWrapper>
       </header>
-
+      <DarkMode darkMode={darkMode} onDarkModeToggle={onDarkModeToggle}/>
 
     </>
-
+  //{ darkMode, onDarkModeToggle }
 
 
 

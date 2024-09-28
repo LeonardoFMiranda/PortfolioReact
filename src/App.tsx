@@ -11,6 +11,7 @@ import './components/Style/mediaScreen.css';
 import StarCanvas from './components/layout/BackgroundStars/Stars';
 import Rotas from './routes/routes';
 import './components/Style/Stars.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'enabled');

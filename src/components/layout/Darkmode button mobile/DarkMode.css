@@ -1,0 +1,97 @@
+.darkmode-mobile__container {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.darkmode-outercircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bd-bg-gradient);
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+}
+
+.darkmode-innercircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f82b6;
+    width: 58px;
+    height: 58px;
+    border-radius: 100px;
+}
+.darkmode-innercircle::before{
+    position: absolute;
+    content: '';
+    z-index: 999;
+    background: url('../../../assets/icons/sun-icon.svg') no-repeat center center;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.darkmode-innercircle::after{
+    position: absolute;
+    content: '';
+    z-index: 999;
+    background: url('../../../assets/icons/moon-icon.svg') no-repeat center center;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.darkmode .darkmode-innercircle::before{
+    opacity: 0;
+}
+
+.darkmode .darkmode-innercircle::after{
+    opacity: 1;
+}
+
+.darkmode-button::before{
+    position: absolute;
+    content: '';
+    z-index: 999;
+    background: url('../../../assets/icons/sun-icon.svg') no-repeat center center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+}
+
+.darkmode-button::after{
+    position: absolute;
+    content: '';
+    z-index: 999;
+    background: url('../../../assets/icons/moon-icon.svg') no-repeat center center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+
+.darkmode .darkmode-button::before{
+    opacity: 0;
+}
+
+.darkmode .darkmode-button::after{
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .darkmode-mobile__container {
+        display: block;
+    }
+    
+}
