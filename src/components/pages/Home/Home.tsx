@@ -108,6 +108,15 @@ function Home() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    const fetchData = async () => {
+      await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/profile.json')
+        .then((response: any) => response.json())
+        .then((data: any) => setMyData(data))
+    }
+    fetchData()
+  }, [])
+
+  useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
       const element = document.querySelector(hash);
