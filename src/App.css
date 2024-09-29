@@ -78,7 +78,6 @@ body {
   text-align: center;
   position: relative;
   border: 10px solid transparent;
-  animation: borderAnimation 3s linear infinite;
 }
 
 .App-logo {

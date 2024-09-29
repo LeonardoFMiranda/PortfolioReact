@@ -4,11 +4,11 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .fixed nav .item-wrapper {
         width: 80%;
     }
-}
+} */
 
 @media screen and (min-width: 1024px) {
     .container__banner {

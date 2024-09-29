@@ -81,7 +81,7 @@
 
 .close-icon {
   position: absolute;
-  right: 6rem;
+  right: 3rem;
   font-size: 2.8rem;
   color: rgb(12, 145, 174);
 }
@@ -152,11 +152,11 @@
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .fixed nav .item-wrapper{
     width: 80%;
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
   .menu__box {
