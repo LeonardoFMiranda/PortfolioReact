@@ -139,6 +139,19 @@
     .box__neon::after {
         inset: 8px !important;
     }
+
+    .project-card{
+        width: 360px !important;
+    }
+
+    .certificado-card{
+        width: 360px !important;
+    }
+
+    .banner__text-container{
+        width: 400px !important;
+        height: 250px !important;
+      }
 }
 
 @media screen and (min-width: 1280px) {

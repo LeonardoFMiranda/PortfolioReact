@@ -10,7 +10,9 @@
 
 .aboutme-container {
     position: relative;
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    width: 350px;
 }
 
 .aboutme-box {

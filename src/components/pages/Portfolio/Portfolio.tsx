@@ -95,7 +95,7 @@ function Portfolio() {
           <p className='portfolio-subtitle'>{t('portfolio.page-description')}</p>
         </section>
         <section className='projects-container'>
-          <div style={{ width: "95%", height: "100%", padding: "10px 10px 10px 18px" }} className="box__neon ">
+          <div style={{ width: "95%", height: "100%", padding: "10px 10px 10px 10px" }} className="box__neon ">
             <div className="projects-box">
               {myData && Array.isArray(myData.projects) && myData.projects.map((project: Project, index: number) => {
                 console.log(project.description);

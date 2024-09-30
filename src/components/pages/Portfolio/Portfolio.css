@@ -19,12 +19,15 @@
 
 .projects-container{
     position: relative;
-    width: 400px;
+    width: 340px;
+    display: flex;
+    justify-content: center;
 }
 
 .projects-box{
     z-index: 5;
     display: flex;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: start;

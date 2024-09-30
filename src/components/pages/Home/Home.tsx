@@ -38,6 +38,9 @@ const SectionItem = styled.section`
   border-radius: 0.4rem;
   background-color: var(--card-box-color);
   transition: ease 0.5s;
+  @media screen and (min-width: 768px) {
+    width: 98%;
+  }
 `
 
 const NeonContainer = styled.div`
@@ -106,12 +109,14 @@ function Home() {
   const [message, setMessage] = useState('');
   const location = useLocation();
   const [show, setShow] = useState(false);
+  const [fetchFinished, setFetchFinished] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       await fetch('https://raw.githubusercontent.com/LeonardoFMiranda/Portfolio/main/data/profile.json')
         .then((response: any) => response.json())
         .then((data: any) => setMyData(data))
+        .then(() => setFetchFinished(true))
     }
     fetchData()
   }, [])
@@ -126,7 +131,7 @@ function Home() {
     } else if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [location]);
+  }, [location,fetchFinished]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
