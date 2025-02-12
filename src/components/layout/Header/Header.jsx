@@ -253,7 +253,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
               </HeaderLi>
 
               <HeaderLi>
-                <NavbarItem to={"/portfólio"}>PORTFOLIO</NavbarItem>
+                <NavbarItem to={"/portfolio"}>PORTFOLIO</NavbarItem>
               </HeaderLi>
 
               <HeaderLi>
