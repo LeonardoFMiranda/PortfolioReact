@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Meu Portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
+  <strong>Seja bem-vindo(a) ao meu portfólio do GitHub! Aqui você encontrará informações sobre minhas habilidades, idiomas, educação e projetos. Fique à vontade para explorar e conhecer um pouco mais sobre mim.</strong>
+</p>
 
-In the project directory, you can run:
+## Habilidades
 
-### `npm start`
+- **HTML**: Desenvolvimento de páginas web semânticas e acessíveis.
+- **CSS**: Estilização e layout responsivo para criar interfaces atraentes e amigáveis.
+- **JavaScript**: Programação do lado do cliente para tornar as páginas dinâmicas e interativas.
+- **React**: Framework JavaScript para construção de interfaces de usuário reativas e componentizadas.
+- **Node.js**: Ambiente de execução JavaScript para desenvolvimento de aplicações server-side.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Idiomas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Português: Língua nativa.
+- Inglês: Fluente, com habilidades de comunicação falada.
 
-### `npm test`
+## Educação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Aqui estão algumas das minhas conquistas educacionais, principalmente obtidas por meio da plataforma Digital Innovation One (DIO) e Alura:
 
-### `npm run build`
+- Formação Html Developer 
+- Formação Css Developer
+- Formação Javascript Developer
+- Formação React Developer (estudando Atualmente)
+- Curso NextJs
+- Formação Laravel
+- Formação Wordpress
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contato
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Caso queira entrar em contato, sinta-se à vontade para me enviar uma mensagem através do meu e-mail: <leonardo.dev1997@gmail.com> ou através da rede social listada abaixo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [LinkedIn](https://www.linkedin.com/in/leonardo-f-miranda/)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Obrigado por visitar meu portfólio! Espero que você goste dos meus projetos e do meu entusiasmo em criar soluções tecnológicas incríveis. Vamos juntos tornar nossas ideias realidade!
