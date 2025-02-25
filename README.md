@@ -8,7 +8,7 @@
 <p align="center">
   <a href="#habilidades">Habilidades</a> •
   <a href="#educacao">Educação</a> •
-  <a href="[https://leonardofmiranda.github.io/Portfolio/](https://leonardomiranda-portfolio.vercel.app/)" target="_blank">Visualizar Portfolio</a> •
+  <a href="https://leonardomiranda-portfolio.vercel.app/" target="_blank">Visualizar Portfolio</a> •
   
 </p>
 
