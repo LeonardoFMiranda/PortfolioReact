@@ -10,7 +10,7 @@
   <a href="#idiomas">Idiomas</a> •
   <a href="#english">English</a> •
   <a href="#português">Português</a> •
-  <a href="https://leonardomiranda-portfolio.vercel.app/" target="_blank">Visualizar Portfolio</a> •
+  <a href="https://leonardomiranda-portfolio.vercel.app/" target="_blank">Explore Portfolio / Visualizar Portfolio</a> •
   
 </p>
 
