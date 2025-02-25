@@ -5,6 +5,13 @@
   <strong>Seja bem-vindo(a) ao meu portfólio do GitHub! Aqui você encontrará informações sobre minhas habilidades, idiomas, educação e projetos. Fique à vontade para explorar e conhecer um pouco mais sobre mim.</strong>
 </p>
 
+<p align="center">
+  <a href="#habilidades">Habilidades</a> •
+  <a href="#educacao">Educação</a> •
+  <a href="[https://leonardofmiranda.github.io/Portfolio/](https://leonardomiranda-portfolio.vercel.app/)" target="_blank">Visualizar Portfolio</a> •
+  
+</p>
+
 ## Habilidades
 
 - **HTML**: Desenvolvimento de páginas web semânticas e acessíveis.
