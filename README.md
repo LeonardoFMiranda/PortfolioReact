@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="#habilidades">Habilidades</a> •
-  <a href="#educacao">Educação</a> •
+  <a href="#idiomas">Idiomas</a> •
   <a href="https://leonardomiranda-portfolio.vercel.app/" target="_blank">Visualizar Portfolio</a> •
   
 </p>
