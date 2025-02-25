@@ -14,7 +14,7 @@
   
 </p>
 
-#English
+# English
 
 ## Skills
 
@@ -54,7 +54,7 @@ Feel free to reach out via email: <leonardo.dev1997@gmail.com> or through the so
 Thank you for visiting my portfolio! I hope you enjoy my projects and my enthusiasm for creating amazing technological solutions. Let's bring ideas to life together!
 
 
-#Português
+# Português
 
 ## Habilidades
 
