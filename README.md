@@ -1,8 +1,10 @@
-# Meu Portfólio
+# Portfólio
 
 
 <p align="center">
-  <strong>Welcome to my GitHub portfolio! Here you will find information about my skills, languages, education, and projects. Feel free to explore and learn more about me.</strong> /
+  <strong>Welcome to my GitHub portfolio! Here you will find information about my skills, languages, education, and projects. Feel free to explore and learn more about me.</strong> 
+  <br/>
+  <br/>
   <strong>Seja bem-vindo(a) ao meu portfólio do GitHub! Aqui você encontrará informações sobre minhas habilidades, idiomas, educação e projetos. Fique à vontade para explorar e conhecer um pouco mais sobre mim.</strong>
 </p>
 
