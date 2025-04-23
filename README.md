@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+# Portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
+  <strong>Welcome to my GitHub portfolio! Here you will find information about my skills, languages, education, and projects. Feel free to explore and learn more about me.</strong> 
+  <br/>
+  <br/>
+  <strong>Seja bem-vindo(a) ao meu portfólio do GitHub! Aqui você encontrará informações sobre minhas habilidades, idiomas, educação e projetos. Fique à vontade para explorar e conhecer um pouco mais sobre mim.</strong>
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#habilidades">Habilidades</a> •
+  <a href="#idiomas">Idiomas</a> •
+  <a href="#english">English</a> •
+  <a href="#português">Português</a> •
+  <a href="https://leonardomiranda-portfolio.vercel.app/" target="_blank">Explore Portfolio / Visualizar Portfolio</a> •
+  
+</p>
 
-### `npm start`
+# English
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Skills
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **HTML**: Development of semantic and accessible web pages.
+- **CSS**: Styling and responsive layout to create attractive and user-friendly interfaces.
+- **JavaScript**: Client-side programming to make pages dynamic and interactive.
+- **React**: JavaScript framework for building reactive and component-based user interfaces.
+- **Next.js**: Framework for React with optimized performance and server-side rendering.
+- **Node.js**: JavaScript runtime environment for server-side application development.
+- **PHP**: Server-side scripting language for dynamic web development.
+- **Laravel**: PHP framework for building robust and scalable web applications.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Idiomas
 
-### `npm run build`
+- Portuguese: Native language.
+- English: Fluent, with strong verbal communication skills.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Educação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here are some of my educational achievements, mainly obtained through Digital Innovation One (DIO) and Alura platforms:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- HTML Developer Certification
+- CSS Developer Certification
+- JavaScript Developer Certification
+- React Developer Certification
+- Next.js Course
+- Laravel Certification
+- WordPress Certification
 
-### `npm run eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Feel free to reach out via email: <leonardo.dev1997@gmail.com> or through the social network listed below.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [LinkedIn](https://www.linkedin.com/in/leonardo-f-miranda/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Thank you for visiting my portfolio! I hope you enjoy my projects and my enthusiasm for creating amazing technological solutions. Let's bring ideas to life together!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# Português
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Habilidades
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **HTML**: Desenvolvimento de páginas web semânticas e acessíveis.
+- **CSS**: Estilização e layout responsivo para criar interfaces atraentes e amigáveis.
+- **JavaScript**: Programação do lado do cliente para tornar as páginas dinâmicas e interativas.
+- **React**: Framework JavaScript para construção de interfaces de usuário reativas e componentizadas.
+- **Next.js**: Framework para React com performance otimizada e renderização no servidor.
+- **Node.js**: Ambiente de execução JavaScript para desenvolvimento de aplicações server-side.
+- **PHP**: Linguagem de programação server-side para desenvolvimento web dinâmico.
+- **Laravel**: Framework PHP para criação de aplicações web robustas e escaláveis.
+
+
+## Idiomas
+
+- Português: Língua nativa.
+- Inglês: Fluente, com habilidades de comunicação falada.
+
+## Educação
+
+Aqui estão algumas das minhas conquistas educacionais, principalmente obtidas por meio da plataforma Digital Innovation One (DIO) e Alura:
+
+- Formação Html Developer 
+- Formação Css Developer
+- Formação Javascript Developer
+- Formação React Developer
+- Curso NextJs
+- Formação Laravel
+- Formação Wordpress
+
+## Contato
+
+Caso queira entrar em contato, sinta-se à vontade para me enviar uma mensagem através do meu e-mail: <leonardo.dev1997@gmail.com> ou através da rede social listada abaixo.
+
+- [LinkedIn](https://www.linkedin.com/in/leonardo-f-miranda/)
+
+Obrigado por visitar meu portfólio! Espero que você goste dos meus projetos e do meu entusiasmo em criar soluções tecnológicas incríveis. Vamos juntos tornar nossas ideias realidade!
