@@ -225,7 +225,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
     if (id === 'home') {
       navigate('/');
     } else if (id === 'portfólio') {
-      navigate('/portfólio');
+      navigate('/portfolio');
     } else if (id === 'sobre-mim') {
       navigate('/sobre-mim');
     } else if (id === 'certificados') {
@@ -415,7 +415,7 @@ const Header = ({ darkMode, onDarkModeToggle }) => {
                         <Link to={"/"} onClick={(e) => checkIdAndRedirect(e,'home')}>FEED</Link>
                       </li>
                       <li className="menu__item">
-                        <Link to={"/portfólio"} onClick={(e) => checkIdAndRedirect(e,'portfólio')}>{t('header.Portfolio')}</Link>
+                        <Link to={"/portfolio"} onClick={(e) => checkIdAndRedirect(e,'portfólio')}>{t('header.Portfolio')}</Link>
                       </li>
                       <li className="menu__item" onClick={toggleDropDown}>
                         <div className="item__dropdown">

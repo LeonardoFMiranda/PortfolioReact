@@ -234,7 +234,7 @@ function Home() {
               <div className="content__wrap" style={{ height: "80%" }}>
                 <p className="content__title text-center">{t('home.portfolio-description')}</p>
                 <div className="text-center mt-4">
-                  <Link to={'/Portfólio'} style={{ textDecoration: "none" }} className="portfolio-btn fw-boldw">{t('home.portfolio-button')}</Link>
+                  <Link to={'/portfolio'} style={{ textDecoration: "none" }} className="portfolio-btn fw-boldw">{t('home.portfolio-button')}</Link>
                 </div>
               </div>
             </section>
